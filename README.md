@@ -4,6 +4,10 @@
     <b> Curated collection of papers on system-aware, serving-time, KV-centric techniques.</b>
 </p> -->
 
+<p align="center">
+    <img src="assets/awesome-cover.png" width="80%"  style="align:center;"/>
+</p>
+
 This repository is dedicated to recording papers on system-aware, serving-time, KV-centric techniques, which serves as supplementary materials for our survey paper:
 
 > **Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization**  
@@ -15,9 +19,9 @@ The survey and the repository are **still work in progress**.
 
 ---
 
+<a name="readme-top"></a>
 
 ## Overview
-
 
 The real bottleneck in LLM inference serving is often the **KV cache**, especially under long contexts and high concurrency. Our survey systematizes recent advances through a distinct **system behavior-oriented taxonomy**, which organizes existing efforts into three behavioral dimensions:\
 🔷 **Temporal** — when is KV cache accessed or computed?\
@@ -25,10 +29,6 @@ The real bottleneck in LLM inference serving is often the **KV cache**, especial
 🔷 **Structural** — how is KV cache represented and managed?
 
 🧠 Grounded in this taxonomy, we analyze **cross-behavior synergies** and **behavior–objective effects**, revealing overlooked regions and concrete open challenges. 
-
-<p align="center">
-    <img src="assets/awesome-cover.png" style="align:center;"/>
-</p>
 
 
 ## Quick Index
