@@ -11,8 +11,8 @@
 This repository is dedicated to recording papers on system-aware, serving-time, KV-centric techniques, which serves as supplementary materials for our survey paper:
 
 > **Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization**  
-> 📄 [TechRxiv Preprint](https://doi.org/10.36227/techrxiv.176046306.66521015/v1) (DOI: 10.36227/techrxiv.176046306.66521015/v1)  
-> 🧑‍💻👩‍💻 *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, and [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>*  
+> 📄🔗 [TechRxiv Preprint](https://doi.org/10.36227/techrxiv.176046306.66521015/v1) (DOI: 10.36227/techrxiv.176046306.66521015/v1)  
+> 🧑‍💻👩‍💻 *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>*  
 > <sup>1</sup>The University of Melbourne, <sup>2</sup>Huazhong University of Science and Technology
 
 The survey and the repository are **still work in progress**.
@@ -36,24 +36,17 @@ The real bottleneck in LLM inference serving is often the **KV cache**, especial
 - [Temporal — Execution \& Scheduling](#temporal--execution--scheduling)
   - [KV-Centric Scheduling](#kv-centric-scheduling)
   - [Pipelining \& Overlapping](#pipelining--overlapping)
-  - [Hardware-Aware Execution](#hardware-aware-execution)
-    - [Disaggregated Inference](#disaggregated-inference)
-    - [Compute Offloading](#compute-offloading)
+  - [Hardware-Aware Execution](#hardware-aware-execution) 
 - [Spatial — Placement \& Migration](#spatial--placement--migration)
   - [Memory Hierarchy KV Orchestration](#memory-hierarchy-kv-orchestration)
-    - [Cross-device Memory Hierarchy](#cross-device-memory-hierarchy)
-    - [Intra-GPU Memory Hierarchy](#intra-gpu-memory-hierarchy)
   - [Compute Device KV Orchestration](#compute-device-kv-orchestration)
 - [Structural — Representation \& Retention](#structural--representation--retention)
-  - [KV Cache Compression](#kv-cache-compression)
-    - [Quantization](#quantization)
-    - [Low-Rank Approximation](#low-rank-approximation)
-    - [Structural Compression](#structural-compression)
-  - [KV Cache Retention Management](#kv-cache-retention-management)
-    - [Allocation \& Reuse](#allocation--reuse)
-    - [Eviction](#eviction)
-- [Cross-Behavior Synergies](#cross-behavior-synergies)
+  - [KV Cache Compression](#kv-cache-compression) (including quantization, low-rank approximation, structural sparsification, and structural merging)
+  - [KV Cache Retention Management](#kv-cache-retention-management) (including allocation, reuse, and eviction)
+- [Cross-behavior Synergies](#cross-behavior-synergies)
+- [Behavior-objective Effects](#behavior-objective-effects)
 - [Citation](#citation)
+- [Contributing](#contributing)
 
 ---
 
@@ -63,6 +56,7 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 
 ### KV-Centric Scheduling
 
+
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
     <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
         ↑ Back to Top ↑
@@ -71,13 +65,18 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 
 ### Pipelining & Overlapping
 
+|Year|Title|Type|Venue|Paper|Code|
+| -- | -- | -- | -- | -- | -- |
+| 2025 | KVPR: Efficient LLM inference with i/o-aware KV cache partial recomputation |  | ACL Findings | [Link](https://aclanthology.org/2025.findings-acl.997.pdf) |[KVPR](https://github.com/chaoyij/KVPR) [![stars](https://img.shields.io/github/stars/chaoyij/KVPR?style=social)](https://github.com/jjiantong/FastPGM) |
+
+
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
     <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
         ↑ Back to Top ↑
     </a>
 </p>
 
-### Hardware-Aware Execution
+### Hardware-aware Execution
 
 #### Disaggregated Inference
 
@@ -124,7 +123,7 @@ These methods target **how** KV data is represented and maintained for memory ef
 ### KV Cache Compression
 #### Quantization
 
-#### Low-Rank Approximation
+#### Low-rank Approximation
 
 #### Structural Compression
 
@@ -147,7 +146,7 @@ These methods target **how** KV data is represented and maintained for memory ef
 
 ---
 
-## Cross-Behavior Synergies
+## Cross-behavior Synergies
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
@@ -158,6 +157,8 @@ These methods target **how** KV data is represented and maintained for memory ef
 
 ---
 
+
+## Behavior-objective Synergies
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
     <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
@@ -183,3 +184,8 @@ The survey will be updated regularly. If you find this survey helpful for your w
   doi = {10.36227/techrxiv.176046306.66521015/v1},
 }
 ```
+
+
+## Contributing
+
+If you would like to include other papers in this survey and repository, please feel free to contact us via email or open an issue with the paper's title, category, and a brief summary highlighting its key techniques and contributions. Other comments regarding this repository or survey are also highly welcome. Thank you!
