@@ -8,7 +8,7 @@
     <img src="assets/awesome-cover.png" width="80%"  style="align:center;"/>
 </p>
 
-This repository is dedicated to recording papers on system-aware, serving-time, KV-centric techniques, which serves as supplementary materials for our survey paper:
+This repository aims to record papers of <u>system-aware, serving-time, KV-centric optimization methods that improve system metrics without retraining or architecture modification</u> (which we call this scope ***sKis***). This serves as supplementary materials for our survey paper:
 
 > **Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization**  
 > 📄🔗 [TechRxiv Preprint](https://doi.org/10.36227/techrxiv.176046306.66521015/v1) (DOI: 10.36227/techrxiv.176046306.66521015/v1)  
@@ -41,7 +41,7 @@ The real bottleneck in LLM inference serving is often the **KV cache**, especial
   - [Memory Hierarchy KV Orchestration](#memory-hierarchy-kv-orchestration)
   - [Compute Device KV Orchestration](#compute-device-kv-orchestration)
 - [Structural — Representation \& Retention](#structural--representation--retention)
-  - [KV Cache Compression](#kv-cache-compression) (including quantization, low-rank approximation, structural sparsification, and structural merging)
+  - [KV Cache Compression](#kv-cache-compression) (including quantization, low-rank approximation, and structural compression)
   - [KV Cache Retention Management](#kv-cache-retention-management) (including allocation, reuse, and eviction)
 - [Cross-behavior Synergies](#cross-behavior-synergies)
 - [Behavior-objective Effects](#behavior-objective-effects)
@@ -189,3 +189,10 @@ The survey will be updated regularly. If you find this survey helpful for your w
 ## Contributing
 
 If you would like to include other papers in this survey and repository, please feel free to contact us via email or open an issue with the paper's title, category, and a brief summary highlighting its key techniques and contributions. Other comments regarding this repository or survey are also highly welcome. Thank you!
+
+
+<!-- ### Contributors
+
+<a href="https://github.com/atfortes/Awesome-KV-Cache-Optimization/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=atfortes/Awesome-KV-Cache-Optimization" />
+</a> -->
