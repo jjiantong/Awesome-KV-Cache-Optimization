@@ -234,7 +234,18 @@ These methods target **how** KV data is represented and maintained for memory ef
 
 #### Low-rank Approximation
 
-Still work in progress.
+
+|Year|Paper|Type|Venue|Code|
+| -- | -- | -- | -- | -- |
+| 2025 | ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference [[Link](https://openreview.net/pdf?id=oa7MYAO6h6)] | Also belongs memory hierarchy KV orchestration (spatial) | ICML 💡 **Spotlight** |[ShadowKV](https://github.com/ByteDance-Seed/ShadowKV) [![stars](https://img.shields.io/github/stars/ByteDance-Seed/ShadowKV?style=social)](https://github.com/ByteDance-Seed/ShadowKV) |
+| 2025 | FDC: Fast KV Dimensionality Compression for Efficient LLM Inference [[Link](https://arxiv.org/pdf/2408.04107)] | | arXiv | |
+| 2025 | ReCalKV: Low-Rank KV Cache Compression via Head Reordering and Offline Calibration [[Link](https://arxiv.org/pdf/2505.24357)] |  | arXiv |[ReCalKV](https://github.com/XIANGLONGYAN/ReCalKV) [![stars](https://img.shields.io/github/stars/XIANGLONGYAN/ReCalKV?style=social)](https://github.com/XIANGLONGYAN/ReCalKV) |
+| 2025 | MatryoshkaKV: Adaptive KV Compression via Trainable Orthogonal Projection [[Link](https://openreview.net/pdf?id=BQwsRy1h3U)] |  | ICLR |[MatryoshkaKV-cache](https://github.com/The-kamisato-Sii/MatryoshkaKV-cache) [![stars](https://img.shields.io/github/stars/The-kamisato-Sii/MatryoshkaKV-cache?style=social)](https://github.com/The-kamisato-Sii/MatryoshkaKV-cache) |
+| 2025 | xKV: Cross-Layer SVD for KV-Cache Compression [[Link](https://arxiv.org/pdf/2503.18893)] |  | arXiv |[xKV](https://github.com/abdelfattah-lab/xKV) [![stars](https://img.shields.io/github/stars/abdelfattah-lab/xKV?style=social)](https://github.com/abdelfattah-lab/xKV) |
+| 2025 | Palu: KV-Cache Compression with Low-Rank Projection [[Link](https://openreview.net/pdf?id=LWMS4pk2vK)] |  | ICLR |[Palu](https://github.com/shadowpa0327/Palu) [![stars](https://img.shields.io/github/stars/shadowpa0327/Palu?style=social)](https://github.com/shadowpa0327/Palu) |
+| 2024 | LoRC: Low-Rank Compression for LLMs KV Cache with a Progressive Compression Strategy [[Link](https://arxiv.org/pdf/2410.03111)] |  | arXiv | |
+| 2025 | Get More with LESS: Synthesizing Recurrence with KV Cache Compression for Efficient LLM Inference [[Link](https://openreview.net/pdf?id=uhHDhVKFMW)] |  | ICML |[LESS](https://github.com/hdong920/LESS) [![stars](https://img.shields.io/github/stars/hdong920/LESS?style=social)](https://github.com/hdong920/LESS) |
+| 2024 | Effectively Compress KV Heads for LLM [[Link](https://arxiv.org/pdf/2406.07056)] |  | arXiv | |
 
 
 
