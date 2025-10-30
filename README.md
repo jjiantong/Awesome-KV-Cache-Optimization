@@ -56,22 +56,22 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 
 ### KV-Centric Scheduling
 
-|Year|Title|Type|Venue|Paper|Code|
-| -- | -- | -- | -- | -- | -- |
-| 2025 | TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection |  | EMNLP | [Link](https://arxiv.org/pdf/2411.02886) |[TokenSelect](https://github.com/pzs19/TokenSelect) [![stars](https://img.shields.io/github/stars/pzs19/TokenSelect?style=social)](https://github.com/pzs19/TokenSelect) |
-| 2025 | RefreshKV: Updating Small KV Cache During Long-form Generation |  | ACL | [Link](https://aclanthology.org/2025.acl-long.1211.pdf) |[RefreshKV](https://github.com/carriex/refreshkv) [![stars](https://img.shields.io/github/stars/carriex/refreshkv?style=social)](https://github.com/carriex/refreshkv) |
-| 2025 | FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving |  | MLSys 🏆 **Outstanding Paper Award** | [Link](https://openreview.net/pdf?id=RXPofAsL8F) |[FlashInfer](https://github.com/flashinfer-ai/flashinfer) [![stars](https://img.shields.io/github/stars/flashinfer-ai/flashinfer?style=social)](https://github.com/flashinfer-ai/flashinfer) |
-| 2025 | Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot |  | FAST 🏆 **Best Paper Award** | [Link](https://www.usenix.org/system/files/fast25-qin.pdf) |[Mooncake](https://github.com/kvcache-ai/Mooncake) [![stars](https://img.shields.io/github/stars/kvcache-ai/Mooncake?style=social)](https://github.com/kvcache-ai/Mooncake) |
-| 2024 | Loki: Low-rank Keys for Efficient Sparse Attention |  | NeurIPS | [Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/1e027da6bec9ceb2ec37951ceeccae93-Paper-Conference.pdf) |[Loki](https://github.com/hpcgroup/loki) [![stars](https://img.shields.io/github/stars/hpcgroup/loki?style=social)](https://github.com/hpcgroup/loki) |
-| 2024 | SGLang: Efficient Execution of Structured Language Model Programs |  | NeurIPS | [Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf) |[SGLang](https://github.com/sgl-project/sglang) [![stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social)](https://github.com/sgl-project/sglang) |
-| 2024 | LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism |  | SOSP | [Link](https://arxiv.org/pdf/2404.09526) |[LoongServe](https://github.com/LoongServe/LoongServe) [![stars](https://img.shields.io/github/stars/LoongServe/LoongServe?style=social)](https://github.com/LoongServe/LoongServe) |
-| 2024 | Fast Inference for Augmented Large Language Models |  | arXiv | [Link](https://arxiv.org/pdf/2404.09526) | |
-| 2024 | LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management |  | arXiv | [Link](https://arxiv.org/pdf/2410.00428) | |
-| 2024 | SparQ Attention: Bandwidth-Efficient LLM Inference |  | ICML | [Link](https://openreview.net/pdf?id=OS5dqxmmtl) |[SparQ Attention](https://github.com/graphcore-research/llm-inference-research/tree/2024-05-sparq) [![stars](https://img.shields.io/github/stars/graphcore-research/llm-inference-research?style=social)](https://github.com/graphcore-research/llm-inference-research/tree/2024-05-sparq) |
-| 2024 | QUEST: Query-Aware Sparsity for Efficient Long-Context LLM Inference |  | ICML | [Link](https://openreview.net/pdf?id=KzACYw0MTV) |[Quest](https://github.com/mit-han-lab/quest) [![stars](https://img.shields.io/github/stars/mit-han-lab/quest?style=social)](https://github.com/mit-han-lab/quest) |
-| 2024 | MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving |  | ICML | [Link](https://openreview.net/pdf?id=R0SoZvqXyQ) |[MuxServe](https://github.com/hao-ai-lab/MuxServe) [![stars](https://img.shields.io/github/stars/hao-ai-lab/MuxServe?style=social)](https://github.com/hao-ai-lab/MuxServe) |
-| 2024 | Preble: Efficient Distributed Prompt Scheduling for LLM Serving |  | ICLR | [Link](https://openreview.net/pdf?id=meKEKDhdnx) |[Preble](https://github.com/WukLab/preble) [![stars](https://img.shields.io/github/stars/WukLab/preble?style=social)](https://github.com/WukLab/preble) |
-| 2024 | Inference without interference: Disaggregate LLM inference for mixed downstream workloads |  | arXiv | [Link](https://arxiv.org/pdf/2401.11181) | |
+|Year|Paper|Type|Venue|Code|
+| -- | -- | -- | -- | -- |
+| 2025 | TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection [[Link](https://arxiv.org/pdf/2411.02886)] |  | EMNLP |[TokenSelect](https://github.com/pzs19/TokenSelect) [![stars](https://img.shields.io/github/stars/pzs19/TokenSelect?style=social)](https://github.com/pzs19/TokenSelect) |
+| 2025 | RefreshKV: Updating Small KV Cache During Long-form Generation [[Link](https://aclanthology.org/2025.acl-long.1211.pdf)] |  | ACL |[RefreshKV](https://github.com/carriex/refreshkv) [![stars](https://img.shields.io/github/stars/carriex/refreshkv?style=social)](https://github.com/carriex/refreshkv) |
+| 2025 | FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving [[Link](https://openreview.net/pdf?id=RXPofAsL8F)] |  | MLSys 🏆 <span style="color:red">Outstanding Paper Award</span> |[FlashInfer](https://github.com/flashinfer-ai/flashinfer) [![stars](https://img.shields.io/github/stars/flashinfer-ai/flashinfer?style=social)](https://github.com/flashinfer-ai/flashinfer) |
+| 2025 | Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot [[Link](https://www.usenix.org/system/files/fast25-qin.pdf)] |  | FAST 🏆 <span style="color:red">Best Paper Award</span> |[Mooncake](https://github.com/kvcache-ai/Mooncake) [![stars](https://img.shields.io/github/stars/kvcache-ai/Mooncake?style=social)](https://github.com/kvcache-ai/Mooncake) |
+| 2024 | Loki: Low-rank Keys for Efficient Sparse Attention [[Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/1e027da6bec9ceb2ec37951ceeccae93-Paper-Conference.pdf)] |  | NeurIPS |[Loki](https://github.com/hpcgroup/loki) [![stars](https://img.shields.io/github/stars/hpcgroup/loki?style=social)](https://github.com/hpcgroup/loki) |
+| 2024 | SGLang: Efficient Execution of Structured Language Model Programs [[Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf)] |  | NeurIPS |[SGLang](https://github.com/sgl-project/sglang) [![stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social)](https://github.com/sgl-project/sglang) |
+| 2024 | LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism [[Link](https://arxiv.org/pdf/2404.09526)] |  | SOSP |[LoongServe](https://github.com/LoongServe/LoongServe) [![stars](https://img.shields.io/github/stars/LoongServe/LoongServe?style=social)](https://github.com/LoongServe/LoongServe) |
+| 2024 | Fast Inference for Augmented Large Language Models [[Link](https://arxiv.org/pdf/2404.09526)] |  | arXiv | |
+| 2024 | LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management [[Link](https://arxiv.org/pdf/2410.00428)] |  | arXiv | |
+| 2024 | SparQ Attention: Bandwidth-Efficient LLM Inference [[Link](https://openreview.net/pdf?id=OS5dqxmmtl)] |  | ICML |[SparQ Attention](https://github.com/graphcore-research/llm-inference-research/tree/2024-05-sparq) [![stars](https://img.shields.io/github/stars/graphcore-research/llm-inference-research?style=social)](https://github.com/graphcore-research/llm-inference-research/tree/2024-05-sparq) |
+| 2024 | QUEST: Query-Aware Sparsity for Efficient Long-Context LLM Inference [[Link](https://openreview.net/pdf?id=KzACYw0MTV)] |  | ICML |[Quest](https://github.com/mit-han-lab/quest) [![stars](https://img.shields.io/github/stars/mit-han-lab/quest?style=social)](https://github.com/mit-han-lab/quest) |
+| 2024 | MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving [[Link](https://openreview.net/pdf?id=R0SoZvqXyQ)] |  | ICML |[MuxServe](https://github.com/hao-ai-lab/MuxServe) [![stars](https://img.shields.io/github/stars/hao-ai-lab/MuxServe?style=social)](https://github.com/hao-ai-lab/MuxServe) |
+| 2024 | Preble: Efficient Distributed Prompt Scheduling for LLM Serving [[Link](https://openreview.net/pdf?id=meKEKDhdnx)] |  | ICLR |[Preble](https://github.com/WukLab/preble) [![stars](https://img.shields.io/github/stars/WukLab/preble?style=social)](https://github.com/WukLab/preble) |
+| 2024 | Inference without interference: Disaggregate LLM inference for mixed downstream workloads [[Link](https://arxiv.org/pdf/2401.11181)] |  | arXiv | |
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
@@ -82,9 +82,16 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 
 ### Pipelining & Overlapping
 
-|Year|Title|Type|Venue|Paper|Code|
-| -- | -- | -- | -- | -- | -- |
-| 2025 | KVPR: Efficient LLM inference with i/o-aware KV cache partial recomputation |  | ACL Findings | [Link](https://aclanthology.org/2025.findings-acl.997.pdf) |[KVPR](https://github.com/chaoyij/KVPR) [![stars](https://img.shields.io/github/stars/chaoyij/KVPR?style=social)](https://github.com/chaoyij/KVPR) |
+|Year|Paper|Type|Venue|Code|
+| -- | -- | -- | -- | -- |
+| 2025 | KVPR: Efficient LLM inference with i/o-aware KV cache partial recomputation [[Link](https://aclanthology.org/2025.findings-acl.997.pdf)] |  | ACL Findings |[KVPR](https://github.com/chaoyij/KVPR) [![stars](https://img.shields.io/github/stars/chaoyij/KVPR?style=social)](https://github.com/chaoyij/KVPR) |
+| 2025 | PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving [[Link](https://arxiv.org/pdf/2501.08192)] |  | arXiv ||
+| 2025 | NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference [[Link](https://openreview.net/pdf?id=umgy9tWBLA)] |  | MLSys |[NEO](https://github.com/NEO-MLSys25/NEO) [![stars](https://img.shields.io/github/stars/NEO-MLSys25/NEO?style=social)](https://github.com/NEO-MLSys25/NEO) |
+| 2025 | Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching [[Link](https://arxiv.org/pdf/2504.06319)] |  | arXiv ||
+| 2024 | Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention [[Link](https://www.usenix.org/system/files/atc24-gao-bin-cost.pdf)] |  | ATC ||
+| 2024 | FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines [[Link](https://arxiv.org/pdf/2403.11421)] |  | arXiv ||
+| 2024 | Improving Throughput-Oriented LLM Inference with CPU Computations [[Link](https://dl.acm.org/doi/pdf/10.1145/3656019.3676949)] |  | PACT |[Heterogen](https://gitlab.csap.snu.ac.kr/research/heterogen)|
+
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
