@@ -147,7 +147,7 @@ These works optimize **where** KV data is stored or transferred to balance memor
 | -- | -- | -- | -- | -- |
 | 2025 | RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval [[Link](https://openreview.net/pdf?id=8z3cOVER4z)] |  | NeurIPS |[RetrievalAttention](https://github.com/microsoft/RetrievalAttention) [![stars](https://img.shields.io/github/stars/microsoft/RetrievalAttention?style=social)](https://github.com/microsoft/RetrievalAttention) |
 | 2025 | RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation [[Link](https://dl.acm.org/doi/pdf/10.1145/3768628)] |  | TOCS | |
-| 2025 | ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference [[Link](https://openreview.net/pdf?id=oa7MYAO6h6)] |  | ICML 💡 **Spotlight** |[ShadowKV](https://github.com/ByteDance-Seed/ShadowKV) [![stars](https://img.shields.io/github/stars/ByteDance-Seed/ShadowKV?style=social)](https://github.com/ByteDance-Seed/ShadowKV) |
+| 2025 | ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference [[Link](https://openreview.net/pdf?id=oa7MYAO6h6)] | Also belongs to KV cache compression (structural) | ICML 💡 **Spotlight** |[ShadowKV](https://github.com/ByteDance-Seed/ShadowKV) [![stars](https://img.shields.io/github/stars/ByteDance-Seed/ShadowKV?style=social)](https://github.com/ByteDance-Seed/ShadowKV) |
 | 2025 | PQCache: Product Quantization-based KVCache for Long Context LLM Inference [[Link](https://arxiv.org/pdf/2407.12820)] |  | SIGMOD |[PQCache](https://github.com/HugoZHL/PQCache) [![stars](https://img.shields.io/github/stars/HugoZHL/PQCache?style=social)](https://github.com/HugoZHL/PQCache) |
 | 2025 | ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression [[Link](https://arxiv.org/abs/2412.03213)] |  | DAC |[ClusterKV](https://github.com/sjtu-zhao-lab/ClusterKV) [![stars](https://img.shields.io/github/stars/sjtu-zhao-lab/ClusterKV?style=social)](https://github.com/sjtu-zhao-lab/ClusterKV) |
 | 2025 | Stateful Large Language Model Serving with Pensieve [[Link](https://arxiv.org/pdf/2312.05516)] |  | EuroSys | |
@@ -159,7 +159,7 @@ These works optimize **where** KV data is stored or transferred to balance memor
 | 2024 | InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management [[Link](https://www.usenix.org/system/files/osdi24-lee.pdf)] |  | OSDI |[InfiniGen](https://github.com/snu-comparch/InfiniGen) [![stars](https://img.shields.io/github/stars/snu-comparch/InfiniGen?style=social)](https://github.com/snu-comparch/InfiniGen) |
 | 2024 | ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching [[Link](https://arxiv.org/pdf/2403.17312)] |  | ISCA | |
 | 2023 | Distributed Inference and Fine-tuning of Large Language Models Over The Internet [[Link](https://openreview.net/pdf?id=XmN7ZNbUAe)] | Also belongs to compute device KV orchestration | NeurIPS |[FastServe](https://github.com/LLMServe/FastServe) [![stars](https://img.shields.io/github/stars/LLMServe/FastServe?style=social)](https://github.com/LLMServe/FastServe) |
-| 2023 | FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU [[Link](https://openreview.net/pdf?id=RRntzKrBTp)] |  | ICML |[FlexLLMGen](https://github.com/FMInference/FlexLLMGen) 🌟 [![stars](https://img.shields.io/github/stars/FMInference/FlexLLMGen?style=social)](https://github.com/FMInference/FlexLLMGen) |
+| 2023 | FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU [[Link](https://openreview.net/pdf?id=RRntzKrBTp)] | Also belongs to KV cache compression (structural) | ICML |[FlexLLMGen](https://github.com/FMInference/FlexLLMGen) 🌟 [![stars](https://img.shields.io/github/stars/FMInference/FlexLLMGen?style=social)](https://github.com/FMInference/FlexLLMGen) |
 
 
 #### Intra-GPU Memory Hierarchy
@@ -183,7 +183,7 @@ These works optimize **where** KV data is stored or transferred to balance memor
 |Year|Paper|Type|Venue|Code|
 | -- | -- | -- | -- | -- |
 | 2024 | InstInfer: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference [[Link](https://arxiv.org/pdf/2409.04992)] | Also belongs to HW-aware execution (temporal) | arXiv | |
-| 2024 | CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving [[Link](https://dl.acm.org/doi/pdf/10.1145/3651890.3672274)] |  | SIGCOMM |[CacheGen](https://github.com/UChi-JCL/CacheGen) [![stars](https://img.shields.io/github/stars/UChi-JCL/CacheGen?style=social)](https://github.com/UChi-JCL/CacheGen) |
+| 2024 | CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving [[Link](https://dl.acm.org/doi/pdf/10.1145/3651890.3672274)] | Also belongs to KV cache compression (structural) | SIGCOMM |[CacheGen](https://github.com/UChi-JCL/CacheGen) [![stars](https://img.shields.io/github/stars/UChi-JCL/CacheGen?style=social)](https://github.com/UChi-JCL/CacheGen) |
 | 2024 | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving [[Link](https://www.usenix.org/system/files/osdi24-zhong-yinmin.pdf)] | Also belongs to HW-aware execution (temporal) | OSDI |[DistServe](https://github.com/LLMServe/DistServe) [![stars](https://img.shields.io/github/stars/LLMServe/DistServe?style=social)](https://github.com/LLMServe/DistServe) |
 | 2024 | Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache [[Link](https://arxiv.org/pdf/2401.02669)] | Also belongs to HW-aware execution (temporal) | aXiv ||
 | 2024 | Splitwise: Efficient generative LLM inference using phase splitting [[Link](https://arxiv.org/abs/2311.18677)] | Also belongs to HW-aware execution (temporal) | ISCA |[Splitwise](https://github.com/vllm-project/vllm/pull/2809) (integrated into vLLM) |
@@ -206,12 +206,15 @@ These methods target **how** KV data is represented and maintained for memory ef
 ### KV Cache Compression
 #### Quantization
 
+
 Still work in progress.
+
 
 
 #### Low-rank Approximation
 
 Still work in progress.
+
 
 
 #### Structural Compression
