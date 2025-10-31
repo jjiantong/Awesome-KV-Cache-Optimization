@@ -117,8 +117,7 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 |Year|Paper|Type|Venue|Code|
 | -- | -- | -- | -- | -- |
 | 2025 | NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference [[Link](https://openreview.net/pdf?id=umgy9tWBLA)] | Also belongs to pipelining & overlapping | MLSys |[NEO](https://github.com/NEO-MLSys25/NEO) [![stars](https://img.shields.io/github/stars/NEO-MLSys25/NEO?style=social)](https://github.com/NEO-MLSys25/NEO) |
-| 2025 | MagicPIG: LSH Sampling for Efficient LLM Generation
- [[Link](https://openreview.net/pdf?id=ALzTQUgW8a)] |  | ICLR 💡 **Spotlight** |[MagicPIG](https://github.com/Infini-AI-Lab/MagicPIG) [![stars](https://img.shields.io/github/stars/Infini-AI-Lab/MagicPIG?style=social)](https://github.com/Infini-AI-Lab/MagicPIG) |
+| 2025 | MagicPIG: LSH Sampling for Efficient LLM Generation [[Link](https://openreview.net/pdf?id=ALzTQUgW8a)] |  | ICLR 💡 **Spotlight** |[MagicPIG](https://github.com/Infini-AI-Lab/MagicPIG) [![stars](https://img.shields.io/github/stars/Infini-AI-Lab/MagicPIG?style=social)](https://github.com/Infini-AI-Lab/MagicPIG) |
 | 2025 | PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System [[Link](https://dl.acm.org/doi/pdf/10.1145/3676641.3716009)] |  | ASPLOS | |
 | 2024 | TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference [[Link](https://dl.acm.org/doi/pdf/10.1145/3688351.3689164)] |  | SYSTOR | |
 | 2024 | InstInfer: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference [[Link](https://arxiv.org/pdf/2409.04992)] | Also belongs to compute device KV orchestration (spatial) | arXiv | |
