@@ -106,9 +106,9 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 | 2025 | Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot [[Link](https://www.usenix.org/system/files/fast25-qin.pdf)] | Also belongs to KV-centric scheduling | FAST 🏆 **Best Paper Award** |[Mooncake](https://github.com/kvcache-ai/Mooncake) [![stars](https://img.shields.io/github/stars/kvcache-ai/Mooncake?style=social)](https://github.com/kvcache-ai/Mooncake) |
 | 2024 | DéjàVu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving [[Link](https://openreview.net/pdf?id=AbGbGZFYOD)] | Also belongs to memory hierarchy KV orchestration (spatial) | ICML |[DéjàVu](https://github.com/msr-fiddle/dejavu) [![stars](https://img.shields.io/github/stars/msr-fiddle/dejavu?style=social)](https://github.com/msr-fiddle/dejavu) |
 | 2024 | MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving [[Link](https://openreview.net/pdf?id=R0SoZvqXyQ)] | Also belongs to KV-centric scheduling | ICML |[MuxServe](https://github.com/hao-ai-lab/MuxServe) [![stars](https://img.shields.io/github/stars/hao-ai-lab/MuxServe?style=social)](https://github.com/hao-ai-lab/MuxServe) |
-| 2024 | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving [[Link](https://www.usenix.org/system/files/osdi24-zhong-yinmin.pdf)] |  | OSDI |[DistServe](https://github.com/LLMServe/DistServe) [![stars](https://img.shields.io/github/stars/LLMServe/DistServe?style=social)](https://github.com/LLMServe/DistServe) |
-| 2024 | Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache [[Link](https://arxiv.org/pdf/2401.02669)] |  | aXiv ||
-| 2024 | Splitwise: Efficient generative LLM inference using phase splitting [[Link](https://arxiv.org/abs/2311.18677)] |  | ISCA |[Splitwise](https://github.com/vllm-project/vllm/pull/2809) (integrated into vLLM) |
+| 2024 | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving [[Link](https://www.usenix.org/system/files/osdi24-zhong-yinmin.pdf)] | Also belongs to compute device KV orchestration (spatial) | OSDI |[DistServe](https://github.com/LLMServe/DistServe) [![stars](https://img.shields.io/github/stars/LLMServe/DistServe?style=social)](https://github.com/LLMServe/DistServe) |
+| 2024 | Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache [[Link](https://arxiv.org/pdf/2401.02669)] | Also belongs to compute device KV orchestration (spatial) | aXiv ||
+| 2024 | Splitwise: Efficient generative LLM inference using phase splitting [[Link](https://arxiv.org/abs/2311.18677)] | Also belongs to compute device KV orchestration (spatial) | ISCA |[Splitwise](https://github.com/vllm-project/vllm/pull/2809) (integrated into vLLM) |
 | 2024 | Inference without interference: Disaggregate LLM inference for mixed downstream workloads [[Link](https://arxiv.org/pdf/2401.11181)] | Also belongs to KV-centric scheduling | arXiv | |
 
 
@@ -121,8 +121,8 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
  [[Link](https://openreview.net/pdf?id=ALzTQUgW8a)] |  | ICLR 💡 **Spotlight** |[MagicPIG](https://github.com/Infini-AI-Lab/MagicPIG) [![stars](https://img.shields.io/github/stars/Infini-AI-Lab/MagicPIG?style=social)](https://github.com/Infini-AI-Lab/MagicPIG) |
 | 2025 | PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System [[Link](https://dl.acm.org/doi/pdf/10.1145/3676641.3716009)] |  | ASPLOS | |
 | 2024 | TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference [[Link](https://dl.acm.org/doi/pdf/10.1145/3688351.3689164)] |  | SYSTOR | |
-| 2024 | InstInfer: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference [[Link](https://arxiv.org/pdf/2409.04992)] |  | arXiv | |
-| 2024 | AttAcc! unleashing the power of PIM for batched transformer-based generative model inference [[Link](https://dl.acm.org/doi/10.1145/3620665.3640422)] |  | ASPLOS |[AttAcc](https://github.com/scale-snu/attacc_simulator) [![stars](https://img.shields.io/github/stars/scale-snu/attacc_simulator?style=social)](https://github.com/scale-snu/attacc_simulator) |
+| 2024 | InstInfer: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference [[Link](https://arxiv.org/pdf/2409.04992)] | Also belongs to compute device KV orchestration (spatial) | arXiv | |
+| 2024 | AttAcc! unleashing the power of PIM for batched transformer-based generative model inference [[Link](https://dl.acm.org/doi/10.1145/3620665.3640422)] | Also belongs to compute device KV orchestration (spatial) | ASPLOS |[AttAcc](https://github.com/scale-snu/attacc_simulator) [![stars](https://img.shields.io/github/stars/scale-snu/attacc_simulator?style=social)](https://github.com/scale-snu/attacc_simulator) |
 | 2024 | FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines [[Link](https://arxiv.org/pdf/2403.11421)] | Also belongs to pipelining & overlapping | arXiv ||
 | 2024 | Improving Throughput-Oriented LLM Inference with CPU Computations [[Link](https://dl.acm.org/doi/pdf/10.1145/3656019.3676949)] | Also belongs to pipelining & overlapping | PACT |[Heterogen](https://gitlab.csap.snu.ac.kr/research/heterogen)|
 
@@ -159,7 +159,7 @@ These works optimize **where** KV data is stored or transferred to balance memor
 | 2024 | Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention [[Link](https://www.usenix.org/system/files/atc24-gao-bin-cost.pdf)] | Also belongs to pipelining & overlapping (temporal) | ATC ||
 | 2024 | InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management [[Link](https://www.usenix.org/system/files/osdi24-lee.pdf)] |  | OSDI |[InfiniGen](https://github.com/snu-comparch/InfiniGen) [![stars](https://img.shields.io/github/stars/snu-comparch/InfiniGen?style=social)](https://github.com/snu-comparch/InfiniGen) |
 | 2024 | ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching [[Link](https://arxiv.org/pdf/2403.17312)] |  | ISCA | |
-| 2023 | Distributed Inference and Fine-tuning of Large Language Models Over The Internet [[Link](https://openreview.net/pdf?id=XmN7ZNbUAe)] |  | NeurIPS |[FastServe](https://github.com/LLMServe/FastServe) [![stars](https://img.shields.io/github/stars/LLMServe/FastServe?style=social)](https://github.com/LLMServe/FastServe) |
+| 2023 | Distributed Inference and Fine-tuning of Large Language Models Over The Internet [[Link](https://openreview.net/pdf?id=XmN7ZNbUAe)] | Also belongs to compute device KV orchestration | NeurIPS |[FastServe](https://github.com/LLMServe/FastServe) [![stars](https://img.shields.io/github/stars/LLMServe/FastServe?style=social)](https://github.com/LLMServe/FastServe) |
 | 2023 | FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU [[Link](https://openreview.net/pdf?id=RRntzKrBTp)] |  | ICML |[FlexLLMGen](https://github.com/FMInference/FlexLLMGen) 🌟 [![stars](https://img.shields.io/github/stars/FMInference/FlexLLMGen?style=social)](https://github.com/FMInference/FlexLLMGen) |
 
 
@@ -181,7 +181,15 @@ These works optimize **where** KV data is stored or transferred to balance memor
 
 ### Compute Device KV Orchestration
 
-Still work in progress.
+|Year|Paper|Type|Venue|Code|
+| -- | -- | -- | -- | -- |
+| 2024 | InstInfer: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference [[Link](https://arxiv.org/pdf/2409.04992)] | Also belongs to HW-aware execution (temporal) | arXiv | |
+| 2024 | CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving [[Link](https://dl.acm.org/doi/pdf/10.1145/3651890.3672274)] |  | SIGCOMM |[CacheGen](https://github.com/UChi-JCL/CacheGen) [![stars](https://img.shields.io/github/stars/UChi-JCL/CacheGen?style=social)](https://github.com/UChi-JCL/CacheGen) |
+| 2024 | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving [[Link](https://www.usenix.org/system/files/osdi24-zhong-yinmin.pdf)] | Also belongs to HW-aware execution (temporal) | OSDI |[DistServe](https://github.com/LLMServe/DistServe) [![stars](https://img.shields.io/github/stars/LLMServe/DistServe?style=social)](https://github.com/LLMServe/DistServe) |
+| 2024 | Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache [[Link](https://arxiv.org/pdf/2401.02669)] | Also belongs to HW-aware execution (temporal) | aXiv ||
+| 2024 | Splitwise: Efficient generative LLM inference using phase splitting [[Link](https://arxiv.org/abs/2311.18677)] | Also belongs to HW-aware execution (temporal) | ISCA |[Splitwise](https://github.com/vllm-project/vllm/pull/2809) (integrated into vLLM) |
+| 2024 | AttAcc! unleashing the power of PIM for batched transformer-based generative model inference [[Link](https://dl.acm.org/doi/10.1145/3620665.3640422)] | Also belongs to HW-aware execution (temporal) | ASPLOS |[AttAcc](https://github.com/scale-snu/attacc_simulator) [![stars](https://img.shields.io/github/stars/scale-snu/attacc_simulator?style=social)](https://github.com/scale-snu/attacc_simulator) |
+| 2023 | Distributed Inference and Fine-tuning of Large Language Models Over The Internet [[Link](https://openreview.net/pdf?id=XmN7ZNbUAe)] | Also belongs to memory hierarchy KV orchestration | NeurIPS |[FastServe](https://github.com/LLMServe/FastServe) [![stars](https://img.shields.io/github/stars/LLMServe/FastServe?style=social)](https://github.com/LLMServe/FastServe) |
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
@@ -194,7 +202,7 @@ Still work in progress.
 
 ## Structural — Representation & Retention
 
-These methods target **how** KV data is represented and maintained for memory efficiency.
+These methods target **how** KV data is represented and maintained for memory efficiency. We divide these methods into two categories: KV cache compression, and KV cache retention management.
 
 ### KV Cache Compression
 #### Quantization
