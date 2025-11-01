@@ -1,35 +1,53 @@
 <h1 align="center">Awesome KV Cache Optimization</h1>
 
-<!-- <p align="center">
-    <b> Curated collection of papers on system-aware, serving-time, KV-centric techniques.</b>
-</p> -->
+<div align="center">
 
-<p align="center">
-    <img src="assets/awesome-cover.png" width="80%"  style="align:center;"/>
-</p>
+![](https://img.shields.io/github/stars/jjiantong/Awesome-KV-Cache-Optimization)
+![](https://img.shields.io/github/watchers/jjiantong/Awesome-KV-Cache-Optimization)
+![](https://img.shields.io/github/last-commit/jjiantong/Awesome-KV-Cache-Optimization?color=green)
+![](https://img.shields.io/badge/PRs-Welcome-blue)
+[![DOI](https://img.shields.io/badge/DOI-10.36227%2Ftechrxiv.176046306.66521015%2Fv1-yellow?logo=doi)](https://doi.org/10.36227/techrxiv.176046306.66521015/v1)
 
-This repository aims to record papers of system-aware, serving-time, KV-centric optimization methods that improve system metrics without retraining or architecture modification (which we call this scope ***sKis***). This serves as supplementary materials for our survey paper:
+</div>
 
-> **Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization**  
-> 📄🔗 [TechRxiv Preprint](https://doi.org/10.36227/techrxiv.176046306.66521015/v1) (DOI: 10.36227/techrxiv.176046306.66521015/v1)  
-> 🧑‍💻👩‍💻 *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>*  
+<div align="center">
+
+**[<a href="https://doi.org/10.36227/techrxiv.176046306.66521015/v1">TechRxiv</a>]** **[<a href="https://www.linkedin.com/feed/update/urn:li:activity:7384388868407529472/">LinkedIn</a>]**
+
+</div>
+
+
+This repository is for our survey paper:
+
+> **[Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](https://doi.org/10.36227/techrxiv.176046306.66521015/v1)**  
+> *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>*  
 > <sup>1</sup>The University of Melbourne, <sup>2</sup>Huazhong University of Science and Technology
 
-The survey and the repository are **still work in progress**.
+<p align="center">
+    <img src="assets/awesome-cover.png" width="90%"  style="align:center;"/>
+</p>
 
----
 
-<a name="readme-top"></a>
-
-## Overview
-
-The real bottleneck in LLM inference serving is often the **KV cache**, especially under long contexts and high concurrency. Our survey systematizes recent advances through a distinct **system behavior-oriented taxonomy**, which organizes existing efforts into three behavioral dimensions:\
+This repository aims to record papers of system-aware, serving-time, KV-centric optimization methods that improve system metrics without retraining or architecture modification (which we call this scope ***sKis***). We systematize recent advances through a distinct **system behavior-oriented taxonomy**, organizing existing efforts into three behavioral dimensions:\
 🔷 **Temporal** — when is KV cache accessed or computed?\
 🔷 **Spatial** — where is KV cache placed and migrated?\
 🔷 **Structural** — how is KV cache represented and managed?
 
 🧠 Grounded in this taxonomy, we analyze **cross-behavior synergies** and **behavior–objective effects**, revealing overlooked regions and concrete open challenges. 
 
+
+### Contributing
+
+The survey and the repository are **still work in progress** and will be updated regularly. 
+
+🙋 If you would like to include your paper in this survey and repository, please feel free to submit a pull request or open an issue with the paper's title and a brief summary highlighting its key techniques. You can also contact us via email. Please let us know if you find out a mistake or have any suggestions! We greatly appreciate your feedback regarding this repository or survey!
+
+🌟 If you find this resource helpful for your work, please consider citing our [research](#citation).
+
+
+---
+
+<a name="readme-index"></a>
 
 ## Quick Index
 
@@ -45,8 +63,11 @@ The real bottleneck in LLM inference serving is often the **KV cache**, especial
   - [KV Cache Retention Management](#kv-cache-retention-management) (including allocation, reuse, and eviction)
 - [Cross-behavior Synergies](#cross-behavior-synergies)
 - [Behavior-objective Effects](#behavior-objective-effects)
-- [Citation](#citation)
-- [Contributing](#contributing)
+
+
+<p align="center">
+<img src="assets/literature.png" width = "90%" alt="" align=center />
+</p>
 
 ---
 
@@ -60,10 +81,10 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 | -- | -- | -- | -- | -- |
 | 2025 | TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection [[Link](https://arxiv.org/pdf/2411.02886)] |  | EMNLP |[TokenSelect](https://github.com/pzs19/TokenSelect) [![stars](https://img.shields.io/github/stars/pzs19/TokenSelect?style=social)](https://github.com/pzs19/TokenSelect) |
 | 2025 | RefreshKV: Updating Small KV Cache During Long-form Generation [[Link](https://aclanthology.org/2025.acl-long.1211.pdf)] |  | ACL |[RefreshKV](https://github.com/carriex/refreshkv) [![stars](https://img.shields.io/github/stars/carriex/refreshkv?style=social)](https://github.com/carriex/refreshkv) |
-| 2025 | FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving [[Link](https://openreview.net/pdf?id=RXPofAsL8F)] |  | MLSys 🏆 **Outstanding Paper Award** |[FlashInfer](https://github.com/flashinfer-ai/flashinfer) 🌟 [![stars](https://img.shields.io/github/stars/flashinfer-ai/flashinfer?style=social)](https://github.com/flashinfer-ai/flashinfer) |
+| 2025 | FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving [[Link](https://openreview.net/pdf?id=RXPofAsL8F)] | Also belongs to allocation & reuse (structural) | MLSys 🏆 **Outstanding Paper Award** |[FlashInfer](https://github.com/flashinfer-ai/flashinfer) 🌟 [![stars](https://img.shields.io/github/stars/flashinfer-ai/flashinfer?style=social)](https://github.com/flashinfer-ai/flashinfer) |
 | 2025 | Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot [[Link](https://www.usenix.org/system/files/fast25-qin.pdf)] | Also belongs to HW-aware execution | FAST 🏆 **Best Paper Award** |[Mooncake](https://github.com/kvcache-ai/Mooncake) 🌟 [![stars](https://img.shields.io/github/stars/kvcache-ai/Mooncake?style=social)](https://github.com/kvcache-ai/Mooncake) |
 | 2024 | Loki: Low-rank Keys for Efficient Sparse Attention [[Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/1e027da6bec9ceb2ec37951ceeccae93-Paper-Conference.pdf)] |  | NeurIPS |[Loki](https://github.com/hpcgroup/loki) [![stars](https://img.shields.io/github/stars/hpcgroup/loki?style=social)](https://github.com/hpcgroup/loki) |
-| 2024 | SGLang: Efficient Execution of Structured Language Model Programs [[Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf)] |  | NeurIPS |[SGLang](https://github.com/sgl-project/sglang) 🌟 [![stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social)](https://github.com/sgl-project/sglang) |
+| 2024 | SGLang: Efficient Execution of Structured Language Model Programs [[Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf)] | Also belongs to allocation & reuse (structural) | NeurIPS |[SGLang](https://github.com/sgl-project/sglang) 🌟 [![stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social)](https://github.com/sgl-project/sglang) |
 | 2024 | LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism [[Link](https://arxiv.org/pdf/2404.09526)] |  | SOSP |[LoongServe](https://github.com/LoongServe/LoongServe) [![stars](https://img.shields.io/github/stars/LoongServe/LoongServe?style=social)](https://github.com/LoongServe/LoongServe) |
 | 2024 | Fast Inference for Augmented Large Language Models [[Link](https://arxiv.org/pdf/2404.09526)] |  | arXiv | |
 | 2024 | LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management [[Link](https://arxiv.org/pdf/2410.00428)] | Also belongs to memory hierarchy KV orchestration (spatial) | arXiv | |
@@ -74,8 +95,8 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 | 2024 | Inference without interference: Disaggregate LLM inference for mixed downstream workloads [[Link](https://arxiv.org/pdf/2401.11181)] | Also belongs to HW-aware execution | arXiv | |
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
@@ -92,8 +113,8 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 | 2024 | Improving Throughput-Oriented LLM Inference with CPU Computations [[Link](https://dl.acm.org/doi/pdf/10.1145/3656019.3676949)] | Also belongs to HW-aware execution | PACT |[Heterogen](https://gitlab.csap.snu.ac.kr/research/heterogen)|
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
@@ -127,8 +148,8 @@ These methods act on **when** KV data is executed, computed, or scheduled to imp
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
@@ -152,7 +173,7 @@ These works optimize **where** KV data is stored or transferred to balance memor
 | 2025 | ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression [[Link](https://arxiv.org/abs/2412.03213)] |  | DAC |[ClusterKV](https://github.com/sjtu-zhao-lab/ClusterKV) [![stars](https://img.shields.io/github/stars/sjtu-zhao-lab/ClusterKV?style=social)](https://github.com/sjtu-zhao-lab/ClusterKV) |
 | 2025 | Stateful Large Language Model Serving with Pensieve [[Link](https://arxiv.org/pdf/2312.05516)] |  | EuroSys | |
 | 2024 | InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory [[Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/d842425e4bf79ba039352da0f658a906-Paper-Conference.pdf)] |  | NeurIPS |[InfLLM](https://github.com/thunlp/InfLLM) [![stars](https://img.shields.io/github/stars/thunlp/InfLLM?style=social)](https://github.com/thunlp/InfLLM) |
-| 2024 | FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving [[Link](https://arxiv.org/pdf/2411.18424)] |  | arXiv || 
+| 2024 | FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving [[Link](https://arxiv.org/pdf/2411.18424)] | Also belongs to allocation & reuse (structural) | arXiv || 
 | 2024 | LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management [[Link](https://arxiv.org/pdf/2410.00428)] | Also belongs to KV-centric scheduling (temporal) | arXiv | |
 | 2024 | DéjàVu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving [[Link](https://openreview.net/pdf?id=AbGbGZFYOD)] | Also belongs to HW-aware execution (temporal) | ICML |[DéjàVu](https://github.com/msr-fiddle/dejavu) [![stars](https://img.shields.io/github/stars/msr-fiddle/dejavu?style=social)](https://github.com/msr-fiddle/dejavu) |
 | 2024 | Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention [[Link](https://www.usenix.org/system/files/atc24-gao-bin-cost.pdf)] | Also belongs to pipelining & overlapping (temporal) | ATC ||
@@ -171,8 +192,8 @@ These works optimize **where** KV data is stored or transferred to balance memor
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
@@ -192,8 +213,8 @@ These works optimize **where** KV data is stored or transferred to balance memor
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
@@ -253,18 +274,47 @@ These methods target **how** KV data is represented and maintained for memory ef
 
 Still work in progress.
 
+|Year|Paper|Type|Venue|Code|
+| -- | -- | -- | -- | -- |
+| 2025 | ClusterAttn: KV Cache Compression under Intrinsic Attention Clustering [[Link](https://aclanthology.org/2025.acl-long.703.pdf)] |  | ACL ||
+| 2025 | ThinK: Thinner Key Cache by Query-Driven Pruning [[Link](https://openreview.net/pdf?id=n0OtGl6VGb)] |  | ICLR 💡 **Spotlight** |[ThinK](https://github.com/SalesforceAIResearch/ThinK) [![stars](https://img.shields.io/github/stars/SalesforceAIResearch/ThinK?style=social)](https://github.com/SalesforceAIResearch/ThinK) |
+| 2025 | D2O: Dynamic Discriminative Operations for Efficient Long-Context Inference of Large Language Models [[Link](https://openreview.net/pdf?id=HzBfoUdjHt)] |  | ICLR |[D2O](https://github.com/AIoT-MLSys-Lab/D2O) [![stars](https://img.shields.io/github/stars/AIoT-MLSys-Lab/D2O?style=social)](https://github.com/AIoT-MLSys-Lab/D2O) |
+| 2024 | MiniCache: KV Cache Compression in Depth Dimension for Large Language Models [[Link](https://openreview.net/pdf?id=sgVOjDqUMT)] |  | NeurIPS | |
+| 2024 | KVSharer: Efficient Inference via Layer-Wise Dissimilar KV Cache Sharing [[Link](https://arxiv.org/pdf/2410.18517)] |  | arXiv |[KVSharer](https://github.com/yangyifei729/KVSharer) [![stars](https://img.shields.io/github/stars/yangyifei729/KVSharer?style=social)](https://github.com/yangyifei729/KVSharer) |
+| 2024 | CHAI: Clustered Head Attention for Efficient LLM Inference [[Link](https://openreview.net/pdf?id=xcDRx8vzCa)] |  | ICML |[CHAI](https://github.com/facebookresearch/chai) [![stars](https://img.shields.io/github/stars/facebookresearch/chai?style=social)](https://github.com/facebookresearch/chai) |
+| 2024 | CaM: Cache Merging for Memory-efficient LLMs Inference [[Link](https://openreview.net/pdf?id=LCTmppB165)] |  | ICML |[CaM](https://github.com/zyxxmu/cam) [![stars](https://img.shields.io/github/stars/zyxxmu/cam?style=social)](https://github.com/zyxxmu/cam) |
+| 2024 | Model Tells You Where to Merge: Adaptive KV Cache Merging for LLMs on Long-Context Tasks [[Link](https://arxiv.org/pdf/2407.08454)] |  | arXiv | |
+| 2024 | SubGen: Token Generation in Sublinear Time and Memory [[Link](https://arxiv.org/pdf/2402.06082)] |  | arXiv | |
+
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
 ### KV Cache Retention Management
 #### Allocation & Reuse
 
-Still work in progress.
+|Year|Paper|Type|Venue|Code|
+| -- | -- | -- | -- | -- |
+| 2025 | FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving [[Link](https://openreview.net/pdf?id=RXPofAsL8F)] | Also belongs to KV-centric scheduling (temporal) | MLSys 🏆 **Outstanding Paper Award** |[FlashInfer](https://github.com/flashinfer-ai/flashinfer) 🌟 [![stars](https://img.shields.io/github/stars/flashinfer-ai/flashinfer?style=social)](https://github.com/flashinfer-ai/flashinfer) |
+| 2025 | Unifying KV Cache Compression for Large Language Models with LeanKV [[Link](https://arxiv.org/pdf/2412.03131v2)] |  | arXiv | |
+| 2025 | vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention [[Link](https://dl.acm.org/doi/pdf/10.1145/3669940.3707256)] |  | ASPLOS | [vAttention](https://github.com/microsoft/vattention) [![stars](https://img.shields.io/github/stars/microsoft/vattention?style=social)](https://github.com/microsoft/vattention) |
+| 2025 | MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool [[Link](https://arxiv.org/pdf/2406.17565)] |  | arXiv |  |
+| 2024 | SGLang: Efficient Execution of Structured Language Model Programs [[Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf)] | Also belongs to KV-centric scheduling (temporal) | NeurIPS |[SGLang](https://github.com/sgl-project/sglang) 🌟 [![stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social)](https://github.com/sgl-project/sglang) |
+| 2024 | FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving [[Link](https://arxiv.org/pdf/2411.18424)] | Also belongs to memory hierarchy KV orchestration (spatial) | arXiv || 
+| 2024 | ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition [[Link](https://aclanthology.org/2024.acl-long.623.pdf)] |  | ACL | [Chunk Attention](https://github.com/microsoft/chunk-attention) [![stars](https://img.shields.io/github/stars/microsoft/chunk-attention?style=social)](https://github.com/microsoft/chunk-attention) |
+| 2024 | vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving [[Link](https://arxiv.org/pdf/2407.15309)] |  | aXiv |  |
+| 2024 | LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference [[Link](https://arxiv.org/pdf/2407.14057)] |  | arXiv |  |
+| 2024 | Prompt Cache: Modular Attention Reuse for Low-Latency Inference [[Link](https://proceedings.mlsys.org/paper_files/paper/2024/file/a66caa1703fe34705a4368c3014c1966-Paper-Conference.pdf)] |  | MLSys | [Prompt Cache](https://github.com/yale-sys/prompt-cache) [![stars](https://img.shields.io/github/stars/yale-sys/prompt-cache?style=social)](https://github.com/yale-sys/prompt-cache) |
+| 2023 | Efficient Memory Management for Large Language Model Serving with PagedAttention [[Link](https://dl.acm.org/doi/pdf/10.1145/3600006.3613165)] |  | SOSP | [vllm](https://github.com/vllm-project/vllm) 🌟 [![stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social)](https://github.com/vllm-project/vllm) |
+
+
+
+
+
 
 
 #### Eviction
@@ -274,8 +324,8 @@ Still work in progress.
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
@@ -286,8 +336,8 @@ Still work in progress.
 Still work in progress.
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
@@ -300,8 +350,8 @@ Still work in progress.
 
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Top ↑
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
     </a>
 </p>
 
@@ -311,7 +361,6 @@ Still work in progress.
 
 ## Citation
 
-The survey will be updated regularly. If you find this survey helpful for your work, please consider citing it.
 ```
 @article{jiang2025towards,
   title = {Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization},
@@ -324,10 +373,6 @@ The survey will be updated regularly. If you find this survey helpful for your w
 }
 ```
 
-
-## Contributing
-
-If you would like to include other papers in this survey and repository, please feel free to contact us via email or open an issue with the paper's title, category, and a brief summary highlighting its key techniques and contributions. Other comments regarding this repository or survey are also highly welcome. Thank you!
 
 
 <!-- ### Contributors
