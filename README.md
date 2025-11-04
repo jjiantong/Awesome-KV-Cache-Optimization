@@ -2,6 +2,7 @@
 
 <div align="center">
 
+![](https://awesome.re/badge.svg?logo=stylelint)
 ![](https://img.shields.io/github/stars/jjiantong/Awesome-KV-Cache-Optimization)
 ![](https://img.shields.io/github/watchers/jjiantong/Awesome-KV-Cache-Optimization)
 ![](https://img.shields.io/github/last-commit/jjiantong/Awesome-KV-Cache-Optimization?color=green)
