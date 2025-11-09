@@ -39,11 +39,11 @@ This repository aims to record papers of system-aware, serving-time, KV-centric 
 
 ### Contributing
 
-The survey and the repository are **still work in progress** and will be updated regularly. 
+The survey and the repository are **still under active development** and will be updated regularly. 
 
 🙋 If you would like to include your paper in this survey and repository, please feel free to submit a pull request or open an issue with the paper's title and a brief summary highlighting its key techniques. You can also contact us via email. Please let us know if you find out a mistake or have any suggestions! We greatly appreciate your feedback regarding this repository or survey!
 
-🌟 If you find this resource helpful for your work, please consider citing our [research](#citation).
+🌟 If you find this resource helpful for your work, please consider giving us a star and citing our [research](#citation).
 
 
 ---
@@ -356,7 +356,7 @@ KV cache eviction discards less critical KV entries (i.e., tokens) based on cert
 
 |Paper|Type|Code|
 | -- | -- | -- |
-| [![Publish](https://img.shields.io/badge/Conference-NeurIPS_2025-blue)]() <br> Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference [[Link](https://arxiv.org/pdf/2407.11550)] <br> *Yuan Feng, Junlin Lv, Yukun Cao, Xike Xie, S. Kevin Zhou* | Head-aware method |![](https://img.shields.io/github/stars/FFY0/AdaKV?style=social) <br> ![](https://img.shields.io/github/last-commit/FFY0/AdaKV?color=green) <br> [PyramidInfer](https://github.com/FFY0/AdaKV) |
+| [![Publish](https://img.shields.io/badge/Conference-NeurIPS_2025-blue)]() <br> Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference [[Link](https://arxiv.org/pdf/2407.11550)] <br> *Yuan Feng, Junlin Lv, Yukun Cao, Xike Xie, S. Kevin Zhou* | Head-aware method |![](https://img.shields.io/github/stars/FFY0/AdaKV?style=social) <br> ![](https://img.shields.io/github/last-commit/FFY0/AdaKV?color=green) <br> [AdaKV](https://github.com/FFY0/AdaKV) |
 | [![Publish](https://img.shields.io/badge/Conference-EMNLP_2025_Findings-blue)]() <br> DynamicKV: Task-Aware Adaptive KV Cache Compression for Long Context LLMs [[Link](https://arxiv.org/pdf/2412.14838)] <br> *Xiabin Zhou, Wenbin Wang, Minyan Zeng, Jiaxian Guo, Xuebo Liu, Li Shen, Min Zhang, Liang Ding* | Static method | |
 | [![Publish](https://img.shields.io/badge/Conference-ICML_2025-blue)]() <br> LaCache: Ladder-Shaped KV Caching for Efficient Long-Context Modeling of Large Language Models [[Link](https://openreview.net/pdf?id=SDjZtxDo35)] <br> *Dachuan Shi, Yonggan Fu, Xiangchi Yuan, Zhongzhi Yu, Haoran You, Sixu Li, Xin Dong, Jan Kautz, Pavlo Molchanov, Yingyan (Celine) Lin* | Layer-aware method | ![](https://img.shields.io/github/stars/GATECH-EIC/LaCache?style=social) <br> ![](https://img.shields.io/github/last-commit/GATECH-EIC/LaCache?color=green) <br> [LaCache](https://github.com/GATECH-EIC/LaCache) |
 | [![Publish](https://img.shields.io/badge/Conference-ICML_2025-blue)]() <br> SepLLM: Accelerate Large Language Models by Compressing One Segment into One Separator [[Link](https://openreview.net/pdf?id=MhVJCxYEEi)] <br> *Guoxuan Chen, Han Shi, Jiawei Li, Yihang Gao, Xiaozhe Ren, Yimeng Chen, Xin Jiang, Zhenguo Li, Weiyang Liu, Chao Huang* | Dynamic method | ![](https://img.shields.io/github/stars/HKUDS/SepLLM?style=social) <br> ![](https://img.shields.io/github/last-commit/HKUDS/SepLLM?color=green) <br> [SepLLM](https://github.com/HKUDS/SepLLM) |
@@ -449,9 +449,13 @@ Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v1
 ```
 
 
+## Contributors
 
-<!-- ### Contributors
+<a href="https://github.com/jjiantong/Awesome-KV-Cache-Optimization/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=jjiantong/Awesome-KV-Cache-Optimization" />
+</a>
 
-<a href="https://github.com/atfortes/Awesome-KV-Cache-Optimization/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=atfortes/Awesome-KV-Cache-Optimization" />
-</a> -->
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jjiantong/Awesome-KV-Cache-Optimization&type=timeline&legend=top-left)](https://www.star-history.com/#jjiantong/Awesome-KV-Cache-Optimization&type=timeline&legend=top-left)
