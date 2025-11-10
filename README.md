@@ -41,7 +41,10 @@ This repository aims to record papers of system-aware, serving-time, KV-centric 
 
 The survey and the repository are **still under active development** and will be updated regularly. 
 
-🙋 If you would like to include your paper in this survey and repository, please feel free to submit a pull request or open an issue with the paper's title and a brief summary highlighting its key techniques. You can also contact us via email. Please let us know if you find out a mistake or have any suggestions! We greatly appreciate your feedback regarding this repository or survey!
+🙋 If you would like to include your paper in this survey and repository, please feel free to submit a pull request. You can generate the markdown row for each paper by filling in the first part of ```generate.py``` 
+and running ```python generate.py```. Alternatively, you can open an issue with the paper's title and a brief summary highlighting its key techniques. You can also contact us via email. 
+
+🙋🏻‍♀️ Please let us know if you find out a mistake or have any suggestions! We greatly appreciate your feedback regarding this repository or survey!
 
 🌟 If you find this resource helpful for your work, please consider giving us a star and citing our [research](#citation).
 
