@@ -34,7 +34,7 @@ This repository aims to record papers of system-aware, serving-time, KV-centric 
 🔷 **Spatial** — where is KV cache placed and migrated?\
 🔷 **Structural** — how is KV cache represented and managed?
 
-🧠 Grounded in this taxonomy, we analyze **cross-behavior synergies** and **behavior–objective effects**, revealing overlooked regions and concrete open challenges. 
+🧠 Grounded in this taxonomy, we analyze **cross-behavior co-design affinity** and **behavior–objective effects**, revealing overlooked regions and concrete open challenges. 
 
 
 ### Contributing
@@ -56,16 +56,16 @@ and running ```python generate.py```. Alternatively, you can open an issue with 
 ## Quick Index
 
 - [Temporal — Execution \& Scheduling](#temporal--execution--scheduling)
-  - [KV-Centric Scheduling](#kv-centric-scheduling)
-  - [Pipelining \& Overlapping](#pipelining--overlapping)
-  - [Hardware-Aware Execution](#hardware-aware-execution) 
+  - [KV-Centric Scheduling (KVS)](#kv-centric-scheduling)
+  - [Pipelining \& Overlapping (OVLP)](#pipelining--overlapping)
+  - [Hardware-Aware Execution (HAE)](#hardware-aware-execution) 
 - [Spatial — Placement \& Migration](#spatial--placement--migration)
-  - [Memory Hierarchy KV Orchestration](#memory-hierarchy-kv-orchestration)
-  - [Compute Device KV Orchestration](#compute-device-kv-orchestration)
+  - [Memory Hierarchy KV Orchestration (MHO)](#memory-hierarchy-kv-orchestration)
+  - [Compute Device KV Orchestration (CDO)](#compute-device-kv-orchestration)
 - [Structural — Representation \& Retention](#structural--representation--retention)
-  - [KV Cache Compression](#kv-cache-compression) (including quantization, low-rank approximation, and structural compression)
-  - [KV Cache Retention Management](#kv-cache-retention-management) (including allocation, reuse, and eviction)
-- [Cross-behavior Synergies](#cross-behavior-synergies)
+  - [KV Cache Compression (KVCC)](#kv-cache-compression) (including quantization, low-rank approximation, and structural compression)
+  - [KV Cache Retention Management (KVRM)](#kv-cache-retention-management) (including allocation, reuse, and eviction)
+- [Cross-behavior Co-design Affinity](#cross-behavior-co-design-affinity)
 - [Behavior-objective Effects](#behavior-objective-effects)
 
 
@@ -346,7 +346,6 @@ These methods manage the retention of the KV cache during serving.
 
 |Paper|Type|Code|
 | -- | -- | -- |
-|  [![Publish](https://img.shields.io/badge/Conference-SOSP_2025-cyan)]() <br> DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction [[Link]([https://arxiv.org/pdf/2412.03131v2](https://dl.acm.org/doi/pdf/10.1145/3731569.3764810))] <br> *Yanqi Zhang, Yuwei Hu, Runyuan Zhao, John C.S. Lui, Haibo Chen*| Structure-aware method; Also belongs to eviction | |
 | [![Publish](https://img.shields.io/badge/Conference-MLSys_2025-cyan)]() ![Award](https://img.shields.io/badge/Outstanding%20Paper%20Award-gold?logo=star&logoColor=white) <br> FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving [[Link](https://openreview.net/pdf?id=RXPofAsL8F)] <br> *Zihao Ye, Lequn Chen, Ruihang Lai, Wuwei Lin, Yineng Zhang, Stephanie Wang, Tianqi Chen, Baris Kasikci, Vinod Grover, Arvind Krishnamurthy, Luis Ceze* | Structure-aware method; Also belongs to KV-centric scheduling (temporal) | ![](https://img.shields.io/github/stars/flashinfer-ai/flashinfer?style=social) <br> ![](https://img.shields.io/github/last-commit/flashinfer-ai/flashinfer?color=green) <br> [FlashInfer](https://github.com/flashinfer-ai/flashinfer) 🌟 |
 | [![Publish](https://img.shields.io/badge/Conference-ASPLOS_2025-cyan)]() <br> vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention [[Link](https://dl.acm.org/doi/pdf/10.1145/3669940.3707256)] <br> *Ramya Prabhu, Ajay Nayak, Jayashree Mohan, Ramachandran Ramjee, Ashish Panwar*| Structure-aware method | ![](https://img.shields.io/github/stars/microsoft/vattention?style=social) <br> ![](https://img.shields.io/github/last-commit/microsoft/vattention?color=green) <br> [vAttention](https://github.com/microsoft/vattention) |
 | MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool [[Link](https://arxiv.org/pdf/2406.17565)] <br> *Cunchen Hu, Heyang Huang, Junhao Hu, Jiang Xu, Xusheng Chen, Tao Xie, Chenxi Wang, Sa Wang, Yungang Bao, Ninghui Sun, Yizhou Shan*| Semantics-guided method |  |
@@ -403,11 +402,11 @@ KV cache eviction discards less critical KV entries (i.e., tokens) based on cert
 
 ---
 
-## Cross-behavior Synergies
+## Cross-behavior Co-design Affinity
 
-The figure below (behavior-behavior synergy network) visualizes cross-behavior co-occurrence. Node size reflects research density; edge thickness scales with behavior co-occurrence. We found that HAE–CDO is the strongest cross-dimension synergy.
+The figure below (behavior-behavior co-design affinity network) visualizes cross-behavior co-occurrence in the literature. Node size reflects research density; edge thickness scales with behavior co-occurrence frequency. We found that HAE–CDO is the strongest cross-dimension co-design pattern.
 
-Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v1) (Section 6 & Appendix E) for more details!
+Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v1) (Section 6) for more details!
 
 
 <p align="center">
@@ -425,7 +424,7 @@ Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v1
 
 
 
-## Behavior-objective Synergies
+## Behavior-objective Effects
 
 The table below (behavior $\times$ objective matrix) marks each behavior's impact on serving objectives as direct (<span style="color:#1E88E5">●</span>) or indirect (<span style="color:#1E88E5">○</span>); stars (<span style="color:#1E88E5">★</span>) on direct cells statistically flag $\geq70\%$ of papers reporting such gains. Side bars show research density (rows/columns). Objectives cover latency, throughput, GPU memory, interconnect I/O, and energy. We also include quality impact $\downarrow$ to capture degradation as a trade-off. 
 
