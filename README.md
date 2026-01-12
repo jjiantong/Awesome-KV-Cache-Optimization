@@ -7,7 +7,7 @@
 ![](https://img.shields.io/github/watchers/jjiantong/Awesome-KV-Cache-Optimization)
 ![](https://img.shields.io/github/last-commit/jjiantong/Awesome-KV-Cache-Optimization?color=green)
 ![](https://img.shields.io/badge/PRs-Welcome-blue)
-[![DOI](https://img.shields.io/badge/DOI-10.36227%2Ftechrxiv.176046306.66521015%2Fv1-yellow?logo=doi)](https://doi.org/10.36227/techrxiv.176046306.66521015/v1)
+[![DOI](https://img.shields.io/badge/DOI-10.36227%2Ftechrxiv.176046306.66521015%2Fv1-yellow?logo=doi)](https://doi.org/10.36227/techrxiv.176046306.66521015/v3)
 
 </div>
 
@@ -402,7 +402,7 @@ KV cache eviction discards less critical KV entries (i.e., tokens) based on cert
 
 The figure below (behavior-behavior co-design affinity network) visualizes cross-behavior co-occurrence in the literature. Node size reflects research density; edge thickness scales with behavior co-occurrence frequency. We found that HAE–CDO is the strongest cross-dimension co-design pattern.
 
-Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v1) (Section 6) for more details!
+Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v3) (Section 6) for more details!
 
 
 <p align="center">
@@ -424,7 +424,7 @@ Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v1
 
 The table below (behavior $\times$ objective matrix) marks each behavior's impact on serving objectives as direct (<span style="color:#1E88E5">●</span>) or indirect (<span style="color:#1E88E5">○</span>); stars (<span style="color:#1E88E5">★</span>) on direct cells statistically flag $\geq70\%$ of papers reporting such gains. Side bars show research density (rows/columns). Objectives cover latency, throughput, GPU memory, interconnect I/O, and energy. We also include quality impact $\downarrow$ to capture degradation as a trade-off. 
 
-Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v1) (Section 6) for detailed analysis!
+Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v3) (Section 6) for detailed analysis!
 
 <p align="center">
     <img src="assets/behavior-objective.png" width="90%"  style="align:center;"/>
@@ -451,8 +451,8 @@ Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v1
   journal = {Authorea Preprints},
   year = {2025},
   publisher = {Authorea},
-  url = {http://dx.doi.org/10.36227/techrxiv.176046306.66521015/v1},
-  doi = {10.36227/techrxiv.176046306.66521015/v1},
+  url = {http://dx.doi.org/10.36227/techrxiv.176046306.66521015/v3},
+  doi = {10.36227/techrxiv.176046306.66521015/v3},
 }
 ```
 
