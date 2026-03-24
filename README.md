@@ -22,7 +22,7 @@
 
 This repository is for our survey paper:
 
-> **[Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](https://doi.org/10.36227/techrxiv.176046306.66521015/v3)**  
+> **[Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](https://doi.org/10.36227/techrxiv.176046306.66521015/v1)**  
 > *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>*  
 > <sup>1</sup>The University of Melbourne, <sup>2</sup>Huazhong University of Science and Technology
 
@@ -460,8 +460,8 @@ Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v3
   journal = {Authorea Preprints},
   year = {2025},
   publisher = {Authorea},
-  url = {http://dx.doi.org/10.36227/techrxiv.176046306.66521015/v3},
-  doi = {10.36227/techrxiv.176046306.66521015/v3},
+  url = {http://dx.doi.org/10.36227/techrxiv.176046306.66521015/v1},
+  doi = {10.36227/techrxiv.176046306.66521015/v1},
 }
 ```
 
