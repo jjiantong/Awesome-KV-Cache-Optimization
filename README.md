@@ -7,7 +7,7 @@
 ![](https://img.shields.io/github/watchers/jjiantong/Awesome-KV-Cache-Optimization)
 ![](https://img.shields.io/github/last-commit/jjiantong/Awesome-KV-Cache-Optimization?color=green)
 ![](https://img.shields.io/badge/PRs-Welcome-blue)
-[![DOI](https://img.shields.io/badge/DOI-10.36227%2Ftechrxiv.176046306.66521015%2Fv1-yellow?logo=doi)](https://doi.org/10.36227/techrxiv.176046306.66521015/v3)
+<!-- [![DOI](https://img.shields.io/badge/DOI-10.36227%2Ftechrxiv.176046306.66521015%2Fv1-yellow?logo=doi)](https://doi.org/10.36227/techrxiv.176046306.66521015/v3) -->
 
 </div>
 
@@ -20,28 +20,37 @@
 </div>
 
 
-This repository is for our survey paper:
+This repository is for our survey paper (to appear in **ACL 2026**):
 
 > **[Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](https://doi.org/10.36227/techrxiv.176046306.66521015/v1)**  
 > *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>*  
 > <sup>1</sup>The University of Melbourne, <sup>2</sup>Huazhong University of Science and Technology
 
-<p align="center">
-    <img src="assets/awesome-cover.png" width="90%"  style="align:center;"/>
-</p>
+---
 
-
-This repository aims to record papers of system-aware, serving-time, KV-centric optimization methods that improve system metrics without retraining or architecture modification (which we call this scope ***sKis***). We systematize recent advances through a distinct **system behavior-oriented taxonomy**, organizing existing efforts into three behavioral dimensions:\
+This repository aims to record papers of system-aware, serving-time, KV-centric optimization methods that improve system metrics without retraining or architecture modification (which we call this scope ***sKis***). We systematize recent advances via a **system behavior-oriented taxonomy**, organizing existing efforts into three behavioral dimensions:\
 🔷 **Temporal** — when is KV cache accessed or computed?\
 🔷 **Spatial** — where is KV cache placed and migrated?\
 🔷 **Structural** — how is KV cache represented and managed?
 
 🧠 Grounded in this taxonomy, we analyze **cross-behavior co-design affinity** and **behavior–objective effects**, revealing overlooked regions and concrete open challenges. 
 
+<p align="center">
+    <img src="assets/awesome-cover.png" width="90%"  style="align:center;"/>
+</p>
+
+
+### News
+
+- 2026-04: 🎉 Our survey was accepted to ACL 2026.
+- 2026-01: 📰 Our survey was featured by 机器之心.
+- 2025-11: ⭐ 100-star milestone! Thanks to the amazing support from the community!
+- 2025-10: 📝 The survey was available on TechRxiv.
+
 
 ### Contributing
 
-The survey and the repository are **still under active development** and will be updated regularly. 
+The repository is **still under active development** and will be updated regularly. 
 
 🙋 If you would like to include your paper in this survey and repository, please feel free to submit a pull request. You can generate the markdown row for each paper by filling in the first part of ```generate.py``` 
 and running ```python generate.py```. Alternatively, you can open an issue with the paper's title and a brief summary highlighting its key techniques. You can also contact us via email. 
