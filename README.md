@@ -480,8 +480,3 @@ Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v3
 <a href="https://github.com/jjiantong/Awesome-KV-Cache-Optimization/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jjiantong/Awesome-KV-Cache-Optimization" />
 </a>
-
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=jjiantong/Awesome-KV-Cache-Optimization&type=timeline&legend=top-left)](https://www.star-history.com/#jjiantong/Awesome-KV-Cache-Optimization&type=timeline&legend=top-left)
