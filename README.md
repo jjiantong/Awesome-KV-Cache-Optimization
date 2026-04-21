@@ -23,7 +23,7 @@
 This repository is for our survey paper (to appear in **ACL 2026**):
 
 > **[Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](https://doi.org/10.36227/techrxiv.176046306.66521015/v1)**  
-> *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1</sup>*, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>  
+> *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1\*</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>  
 > <sup>1</sup>The University of Melbourne, <sup>2</sup>Huazhong University of Science and Technology
 
 ---
@@ -463,14 +463,12 @@ Please check our [paper](https://doi.org/10.36227/techrxiv.176046306.66521015/v3
 ## Citation
 
 ```
-@article{jiang2025towards,
+@inproceedings{jiang2026towards,
   title = {Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization},
   author = {Jiang, Jiantong and Yang, Peiyu and Zhang, Rui and Liu, Feng},
-  journal = {Authorea Preprints},
-  year = {2025},
-  publisher = {Authorea},
-  url = {http://dx.doi.org/10.36227/techrxiv.176046306.66521015/v1},
-  doi = {10.36227/techrxiv.176046306.66521015/v1},
+  booktitle = "Findings of the Association for Computational Linguistics: ACL 2026",
+  year = {2026},
+  url = {http://dx.doi.org/10.36227/techrxiv.176046306.66521015/v3},
 }
 ```
 
