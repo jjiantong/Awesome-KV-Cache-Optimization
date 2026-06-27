@@ -19,7 +19,7 @@
 </div>
 
 
-This repository is for our survey paper (to appear in **ACL 2026**):
+This repository is for our survey paper (**ACL 2026 Findings**):
 
 > **[Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](https://aclanthology.org/2026.findings-acl.1916/)**  
 > *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1\*</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>  
@@ -122,7 +122,7 @@ KV-centric scheduling methods explicitly integrate KV characteristics into runti
 
 ### Pipelining & Overlapping
 
-Pipelining and overlapping methods hide latency by concurrently executing KV-related compute, communication, and I/O. They often embedded in the broader systems.
+Pipelining and overlapping methods hide latency by concurrently executing KV-related compute, communication, and I/O. Though often embedded in the broader systems, we highlight the following methods where pipelining and overlapping forms the core technical contribution.
 
 |Paper|Type|Code|
 | -- | -- | -- |
