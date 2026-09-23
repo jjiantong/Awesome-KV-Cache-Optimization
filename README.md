@@ -80,6 +80,7 @@ and running ```python generate.py```. Alternatively, you can open an issue with 
   - [KV Cache Retention Management (KVRM)](#kv-cache-retention-management) (including allocation, reuse, and eviction)
 - [Cross-behavior Co-design Affinity](#cross-behavior-co-design-affinity)
 - [Behavior-objective Effects](#behavior-objective-effects)
+- [Tools, Simulators \& Benchmarking Resources](#tools-simulators--benchmarking-resources)
 
 
 <p align="center">
@@ -534,6 +535,26 @@ Please check our [paper](https://aclanthology.org/2026.findings-acl.1916/) (Sect
 
 
 
+
+
+---
+
+## Tools, Simulators & Benchmarking Resources
+
+Simulators, workload datasets, and benchmarking resources for evaluating KV cache management and LLM serving systems without a full GPU deployment.
+
+|Paper|Type|Code|
+| -- | -- | -- |
+| [![Publish](https://img.shields.io/badge/Conference-MLSys_2025-cyan)]() <br> Vidur: A Large-Scale Simulation Framework for LLM Inference [[Link](https://arxiv.org/pdf/2405.05465)] <br> *Abhinav Agrawal, Amey Agrawal, et al.* | High-fidelity LLM inference simulator with quality-of-service-aware configuration search for capacity planning and scheduling | [![stars](https://img.shields.io/github/stars/microsoft/Vidur?style=social)](https://github.com/microsoft/Vidur) <br> ![](https://img.shields.io/github/last-commit/microsoft/Vidur?color=green) <br> [Vidur](https://github.com/microsoft/Vidur) |
+| BurstGPT: A Real-World Workload Dataset to Optimize LLM Serving Systems [[Link](https://arxiv.org/pdf/2401.17644)] <br> *Yuxin Wang, Yuhan Chen, et al.* | Real-world request traces from Azure OpenAI GPT-3.5/GPT-4 services, including traffic bursts for serving-system stress tests | [![stars](https://img.shields.io/github/stars/HPMLL/BurstGPT?style=social)](https://github.com/HPMLL/BurstGPT) <br> ![](https://img.shields.io/github/last-commit/HPMLL/BurstGPT?color=green) <br> [BurstGPT](https://github.com/HPMLL/BurstGPT) |
+| agent-serving-sim: A Discrete-Event Simulator for KV Cache Management in LLM Agent Serving [[Link](https://github.com/Naloam/agent-serving-sim)] <br> *Naloam* | CPU-only discrete-event simulator for agent workloads: radix-tree prefix caching with pluggable eviction and admission policies, preemption and eviction-cost modeling, and an offline Belady baseline; outputs JCT/TTFT, hit rate, and memory curves; Also relates to KV cache retention management (structural) | [![stars](https://img.shields.io/github/stars/Naloam/agent-serving-sim?style=social)](https://github.com/Naloam/agent-serving-sim) <br> ![](https://img.shields.io/github/last-commit/Naloam/agent-serving-sim?color=green) <br> [agent-serving-sim](https://github.com/Naloam/agent-serving-sim) |
+
+
+<p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
+    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
+        ↑ Back to Index ↑
+    </a>
+</p>
 
 
 ## Citation

@@ -23,6 +23,13 @@ NON_PAPER_SECTIONS = (
     "News",
 )
 
+# Sections holding non-paper resources (tools, datasets, benchmarks).
+# Entries without a venue marker default to venue_type "resource" instead of
+# "preprint" so the page does not mislabel them.
+RESOURCE_SECTIONS = (
+    "Tools, Simulators",
+)
+
 
 def parse_paper_cell(cell: str) -> dict:
     is_new = "New-to%20repo" in cell or "New-to repo" in cell
@@ -176,6 +183,7 @@ def parse_row(line: str):
 def parse_readme(text: str):
     papers = []
     current_path = []
+    in_resources = False
 
     for line in text.split("\n"):
         if line.startswith("## "):
@@ -184,6 +192,7 @@ def parse_readme(text: str):
                 current_path = []
             else:
                 current_path = [(2, title)]
+            in_resources = any(x in title for x in RESOURCE_SECTIONS)
         elif line.startswith("### ") and current_path:
             title = line[4:].strip()
             current_path = current_path[:1] + [(3, title)]
@@ -193,6 +202,8 @@ def parse_readme(text: str):
         elif line.startswith("|") and current_path:
             paper = parse_row(line)
             if paper:
+                if in_resources and paper["venue_type"] == "preprint":
+                    paper["venue_type"] = "resource"
                 paper["path"] = [name for _, name in current_path]
                 papers.append(paper)
 
@@ -243,6 +254,7 @@ def main():
         "systems": sum(1 for p in papers if p["venue_type"] == "systems"),
         "ai_ml": sum(1 for p in papers if p["venue_type"] == "ai-ml"),
         "preprint": sum(1 for p in papers if p["venue_type"] == "preprint"),
+        "resource": sum(1 for p in papers if p["venue_type"] == "resource"),
         "awarded": sum(1 for p in papers if p["award"]),
     }
 
@@ -571,6 +583,7 @@ select.sort {
 .badge.systems { background: #ecfeff; color: #0e7490; border-color: #a5f3fc; }
 .badge.ai-ml { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
 .badge.preprint { background: #f3f4f6; color: #4b5563; border-color: #d1d5db; }
+.badge.resource { background: #eef2ff; color: #4338ca; border-color: #c7d2fe; }
 .badge.award { background: #fffbeb; color: #b45309; border-color: #fde68a; }
 
 .paper h4 { font-size: 15.5px; font-weight: 600; margin: 0 0 4px; line-height: 1.4; }
@@ -673,6 +686,7 @@ BODY = """
         <span class="chip" data-filter="venue" data-value="systems" data-i18n="chip.systems">Systems</span>
         <span class="chip" data-filter="venue" data-value="ai-ml" data-i18n="chip.ai_ml">AI/ML</span>
         <span class="chip" data-filter="venue" data-value="preprint" data-i18n="chip.preprint">Preprint</span>
+        <span class="chip" data-filter="venue" data-value="resource" data-i18n="chip.resource">Resource</span>
       </div>
 
       <div class="filter-group">
@@ -752,6 +766,7 @@ SCRIPT = r"""
       'stats.systems': 'Systems Venues',
       'stats.ai_ml': 'AI/ML Venues',
       'stats.preprint': 'Preprints',
+      'stats.resource': 'Resources',
       'stats.new': 'Newly Added',
       'stats.awarded': 'Awarded',
       'tax.title': 'Taxonomy at a Glance',
@@ -771,6 +786,7 @@ SCRIPT = r"""
       'chip.systems': 'Systems',
       'chip.ai_ml': 'AI/ML',
       'chip.preprint': 'Preprint',
+      'chip.resource': 'Resource',
       'chip.has_code': 'Has code',
       'chip.no_code': 'No code',
       'chip.new': '🆕 New',
@@ -788,6 +804,7 @@ SCRIPT = r"""
       'badge.systems_default': 'Systems',
       'badge.ai_ml_default': 'AI/ML',
       'badge.preprint_default': 'Preprint',
+      'badge.resource_default': 'Resource',
       'paper.code': '📦 Code',
       'paper.no_code': '— no code —',
       'paper.also_in': '+ also in:',
@@ -805,6 +822,7 @@ SCRIPT = r"""
       'stats.systems': '系统会议',
       'stats.ai_ml': 'AI/ML 会议',
       'stats.preprint': '预印本',
+      'stats.resource': '资源',
       'stats.new': '新近收录',
       'stats.awarded': '获奖论文',
       'tax.title': '分类体系总览',
@@ -824,6 +842,7 @@ SCRIPT = r"""
       'chip.systems': '系统',
       'chip.ai_ml': 'AI/ML',
       'chip.preprint': '预印本',
+      'chip.resource': '资源',
       'chip.has_code': '有代码',
       'chip.no_code': '无代码',
       'chip.new': '🆕 新增',
@@ -841,6 +860,7 @@ SCRIPT = r"""
       'badge.systems_default': '系统',
       'badge.ai_ml_default': 'AI/ML',
       'badge.preprint_default': '预印本',
+      'badge.resource_default': '资源',
       'paper.code': '📦 代码',
       'paper.no_code': '— 暂无代码 —',
       'paper.also_in': '+ 还属于:',
@@ -940,6 +960,7 @@ SCRIPT = r"""
       { num: s.systems, label: t('stats.systems') },
       { num: s.ai_ml, label: t('stats.ai_ml') },
       { num: s.preprint, label: t('stats.preprint') },
+      { num: s.resource, label: t('stats.resource') },
       { num: s.new, label: t('stats.new') },
       { num: s.awarded, label: t('stats.awarded') },
     ];
@@ -1188,6 +1209,8 @@ SCRIPT = r"""
       return `<span class="badge systems">⚙️ ${escapeHtml(v)}</span>`;
     } else if (p.venue_type === 'ai-ml') {
       return `<span class="badge ai-ml">🎓 ${escapeHtml(v)}</span>`;
+    } else if (p.venue_type === 'resource') {
+      return `<span class="badge resource">🛠️ ${escapeHtml(v)}</span>`;
     } else {
       return `<span class="badge preprint">📄 ${escapeHtml(v)}</span>`;
     }
