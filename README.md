@@ -21,7 +21,7 @@
 </div>
 
 
-This repository is for our survey paper (**ACL 2026 Findings**):
+This repository accompanies our survey paper (**ACL 2026 Findings**):
 
 > **[Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](https://aclanthology.org/2026.findings-acl.1916/)**  
 > *[Jiantong Jiang](https://jjiantong.github.io/)<sup>1</sup>, [Peiyu Yang](https://ypeiyu.github.io/)<sup>1\*</sup>, [Rui Zhang](https://www.ruizhang.info/)<sup>2</sup>, [Feng Liu](https://fengliu90.github.io/)<sup>1</sup>  
@@ -29,11 +29,12 @@ This repository is for our survey paper (**ACL 2026 Findings**):
 
 ---
 
-This repository aims to record papers of system-aware, serving-time, KV-centric optimization methods that improve system metrics without retraining or architecture modification (which we call this scope ***sKis***). We systematize recent advances via a **system behavior-oriented taxonomy**, organizing existing efforts into three behavioral dimensions:\
+This repository maintains a continuously updated collection of **system-aware, serving-time, KV-centric** optimization methods that improve system metrics without retraining or architecture modification, a scope we call ***sKis***. We organize the literature using the **system behavior-oriented taxonomy** introduced in our survey:\
 🔷 **Temporal** — when is KV cache accessed or computed?\
 🔷 **Spatial** — where is KV cache placed and migrated?\
 🔷 **Structural** — how is KV cache represented and managed?
 
+📚 The taxonomy serves as a stable organizing framework, while the paper collection below is continuously updated as new work appears.\
 🧠 Grounded in this taxonomy, we analyze **cross-behavior co-design affinity** and **behavior–objective effects**, revealing overlooked regions and concrete open challenges. 
 
 <p align="center">
@@ -54,13 +55,11 @@ This repository aims to record papers of system-aware, serving-time, KV-centric 
 
 The repository is **still under active development** and will be updated regularly. 
 
-🙋 If you would like to include your paper in this survey and repository, please feel free to submit a pull request. You can generate the markdown row for each paper by filling in the first part of ```generate.py``` 
-and running ```python generate.py```. Alternatively, you can open an issue with the paper's title and a brief summary highlighting its key techniques. You can also contact us via email. 
+🙋 If you would like to include your paper in this survey and repository, please feel free to submit a pull request. You can generate the markdown row for each paper by filling in the first part of ```generate.py``` and running ```python generate.py```. Alternatively, you can open an issue with the paper's title and a brief summary highlighting its key techniques. You can also contact us via email. 
 
-🙋🏻‍♀️ Please let us know if you find out a mistake or have any suggestions! We greatly appreciate your feedback regarding this repository or survey!
+🙋🏻‍♀️ Please let us know if you find any metadata, venue, classification, or link errors, or have suggestions for the repository. We greatly appreciate your feedback!
 
 🌟 If you find this resource helpful for your work, please consider giving us a star and citing our [research](#citation).
-
 
 ---
 
@@ -76,16 +75,13 @@ and running ```python generate.py```. Alternatively, you can open an issue with 
   - [Memory Hierarchy KV Orchestration (MHO)](#memory-hierarchy-kv-orchestration)
   - [Compute Device KV Orchestration (CDO)](#compute-device-kv-orchestration)
 - [Structural — Representation \& Retention](#structural--representation--retention)
-  - [KV Cache Compression (KVCC)](#kv-cache-compression) (including quantization, low-rank approximation, and structural compression, and codec-based compression)
-  - [KV Cache Retention Management (KVRM)](#kv-cache-retention-management) (including allocation, reuse, and eviction)
-- [Cross-behavior Co-design Affinity](#cross-behavior-co-design-affinity)
-- [Behavior-objective Effects](#behavior-objective-effects)
+  - [KV Cache Compression (KVCC)](#kv-cache-compression) 
+  - [KV Cache Retention Management (KVRM)](#kv-cache-retention-management) 
+- [Insights from the ACL 2026 Survey](#insights-from-the-acl-2026-survey)
+  - [Cross-behavior Co-design Affinity](#cross-behavior-co-design-affinity)
+  - [Behavior-objective Effects](#behavior-objective-effects)
 - [Tools, Simulators \& Benchmarking Resources](#tools-simulators--benchmarking-resources)
 
-
-<p align="center">
-<img src="assets/literature.png" width = "95%" alt="" align=center />
-</p>
 
 ---
 
@@ -494,33 +490,32 @@ KV cache eviction discards less critical KV entries (i.e., tokens) based on cert
 
 ---
 
-## Cross-behavior Co-design Affinity
+## Insights from the ACL 2026 Survey
 
-The figure below (behavior-behavior co-design affinity network) visualizes cross-behavior co-occurrence in the literature. Node size reflects research density; edge thickness scales with behavior co-occurrence frequency. We found that HAE–CDO is the strongest cross-dimension co-design pattern.
+> **Note.** The following analyses are reproduced from our published ACL 2026 survey. They were computed from the literature corpus included in the paper and are **not automatically recomputed** as new papers are added to this repository. They should therefore be interpreted as a snapshot of the field captured by the survey.
 
-Please check our [paper](https://aclanthology.org/2026.findings-acl.1916/) (Section 6.1) for more details!
 
+### Cross-behavior Co-design Affinity
+
+The behavior–behavior co-design affinity network summarizes how frequently the seven sKis behaviors co-occur **within the survey corpus**. Node size reflects research density, while edge thickness reflects normalized co-design affinity. In this snapshot, **HAE–CDO** exhibits the strongest cross-dimension co-design affinity.
+
+For the full analysis and computation details, please see our [paper](https://aclanthology.org/2026.findings-acl.1916/) (Section 6.1 and Appendix F).
 
 <p align="center">
     <img src="assets/behavior-behavior.png" width="70%"  style="align:center;"/>
 </p>
 
 
-<p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
-    <a href="#readme-index" style="text-decoration: none; color: #007bff; font-weight: bold;">
-        ↑ Back to Index ↑
-    </a>
-</p>
-
----
 
 
 
-## Behavior-objective Effects
+### Behavior-objective Effects
 
-The table below (behavior $\times$ objective matrix) marks each behavior's impact on serving objectives as direct (<span style="color:#1E88E5">●</span>) or indirect (<span style="color:#1E88E5">○</span>); stars (<span style="color:#1E88E5">★</span>) on direct cells statistically flag $\geq70\%$ of papers reporting such gains. Side bars show research density (rows/columns). Objectives cover latency, throughput, GPU memory, interconnect I/O, and energy. We also include quality impact $\downarrow$ to capture degradation as a trade-off. 
+The behavior $\times$ objective matrix summarizes how each sKis behavior relates to serving objectives **within the survey corpus**. Direct (<span style="color:#1E88E5">●</span>) and indirect (<span style="color:#1E88E5">○</span>) effects are distinguished, while stars (<span style="color:#1E88E5">★</span>) mark direct cells where $\geq70\%$ of the corresponding papers report gains. Side bars reflect research density in the survey corpus. The objectives include mean latency, tail latency, throughput, GPU memory, interconnect I/O, energy/power, and quality impact $\downarrow$.
 
-Please check our [paper](https://aclanthology.org/2026.findings-acl.1916/) (Section 6.1) for detailed analysis!
+For the full analysis, please see our [paper](https://aclanthology.org/2026.findings-acl.1916/) (Section 6.1).
+
+
 
 <p align="center">
     <img src="assets/behavior-objective.png" width="90%"  style="align:center;"/>
