@@ -7,7 +7,9 @@ single self-contained HTML page. Re-run after editing README.md:
     python build_page.py
 """
 import json
+import os
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -299,11 +301,29 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 """
 
 
+def get_build_date():
+    """Use a UTC calendar date; allow reproducible builds to pin the clock."""
+    epoch = os.environ.get("SOURCE_DATE_EPOCH")
+    if epoch is not None:
+        return datetime.fromtimestamp(int(epoch), timezone.utc).date()
+    return datetime.now(timezone.utc).date()
+
+
 def render_html(payload: dict) -> str:
+    built_on = get_build_date()
+    months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+    body = (
+        BODY
+        .replace("{{BUILD_DATE_ISO}}", built_on.isoformat())
+        .replace("{{BUILD_DATE_EN}}", f"{months[built_on.month - 1]} {built_on.day}, {built_on.year}")
+        .replace("{{BUILD_DATE_ZH}}", f"{built_on.year}年{built_on.month}月{built_on.day}日")
+        .replace("{{PAPER_COUNT}}", str(len(payload["papers"])))
+    )
     html = (
         HTML_TEMPLATE
         .replace("{{STYLE_SLOT}}", STYLE)
-        .replace("{{BODY_SLOT}}", BODY)
+        .replace("{{BODY_SLOT}}", body)
         .replace("{{DATA_SLOT}}", json.dumps(payload, ensure_ascii=False))
         .replace("{{SCRIPT_SLOT}}", SCRIPT)
     )
@@ -486,7 +506,9 @@ footer h2 { font-size: var(--font-subtitle); font-weight: 600; line-height: 1.3;
 footer h3 { font-size: var(--font-sm); font-weight: 600; margin: 0 0 var(--space-3); color: var(--text); }
 footer p { margin: 0 0 var(--space-4); max-width: 64ch; }
 footer pre { margin: var(--space-4) 0 0; padding: var(--space-4); background: var(--bg-soft); border: 0; border-left: 2px solid var(--border); font: var(--font-meta)/1.7 ui-monospace, SFMono-Regular, monospace; max-width: 100%; overflow-x: auto; }
+.copy-bibtex { margin-top: var(--space-3); min-width: 112px; justify-content: center; background: var(--bg); font-size: var(--font-meta); }
 .footer-note { margin-top: var(--space-6); color: var(--text-mute); font-size: var(--font-xs); }
+.footer-maintenance { margin: var(--space-2) 0 0; color: var(--text-mute); font-size: var(--font-xs); }
 @media (max-width: 1024px) {
   .hero-layout { gap: var(--space-8); }
   .tax-grid { gap: var(--space-3); }
@@ -700,13 +722,14 @@ BODY = """
     <div>
       <h2 data-i18n="footer.citation">Cite this survey</h2>
       <p data-i18n="footer.cite_desc">If you find this resource helpful, please cite our survey:</p>
-<pre>@inproceedings{jiang2026towards,
+<pre id="survey-bibtex">@inproceedings{jiang2026towards,
   title     = "Towards Efficient Large Language Model Serving: A Survey on System-Aware {KV} Cache Optimization",
   author    = "Jiang, Jiantong and Yang, Peiyu and Zhang, Rui and Liu, Feng",
   booktitle = "Findings of ACL 2026",
   year      = "2026",
   url       = "https://aclanthology.org/2026.findings-acl.1916/"
 }</pre>
+      <button type="button" id="copy-bibtex" class="code-button copy-bibtex" aria-live="polite" aria-atomic="true">Copy BibTeX</button>
     </div>
     <div>
       <h3 data-i18n="footer.links">Links</h3>
@@ -719,6 +742,7 @@ BODY = """
         Maintained by the ACL 2026 survey authors.<br/>
         Page generated from README.md via <code>build_page.py</code>.
       </p>
+      <p class="footer-maintenance"><span data-i18n="footer.updated">Last updated:</span> <time id="build-date" datetime="{{BUILD_DATE_ISO}}" data-en="{{BUILD_DATE_EN}}" data-zh="{{BUILD_DATE_ZH}}">{{BUILD_DATE_EN}}</time> · <span id="footer-paper-count">{{PAPER_COUNT}} papers</span></p>
     </div>
   </div>
 </footer>
@@ -786,6 +810,11 @@ SCRIPT = r"""
       'footer.links': 'Links',
       'footer.full_readme': 'Full README',
       'footer.note': 'Maintained by the ACL 2026 survey authors.<br/>Page generated from README.md via <code>build_page.py</code>.',
+      'footer.copy': 'Copy BibTeX',
+      'footer.copied': '✓ Copied',
+      'footer.copy_failed': 'Copy failed — try again',
+      'footer.updated': 'Last updated:',
+      'footer.paper_count': '{n} papers',
       'lang.switch_to': '中文',
       'nav.label': 'Main navigation',
       'nav.skip': 'Skip to papers',
@@ -870,6 +899,11 @@ SCRIPT = r"""
       'footer.links': '相关链接',
       'footer.full_readme': '完整 README',
       'footer.note': '由 ACL 2026 综述作者维护。<br/>本页面由 README.md 通过 <code>build_page.py</code> 自动生成。',
+      'footer.copy': '复制 BibTeX',
+      'footer.copied': '✓ 已复制',
+      'footer.copy_failed': '复制失败，请重试',
+      'footer.updated': '最近更新：',
+      'footer.paper_count': '共 {n} 篇论文',
       'lang.switch_to': 'EN',
       'nav.label': '主导航',
       'nav.skip': '跳转到论文',
@@ -954,6 +988,28 @@ SCRIPT = r"""
     return name;
   }
 
+  // Copy the existing citation verbatim, with localized, temporary feedback.
+  const copyBibtex = document.getElementById('copy-bibtex');
+  let copyState = 'copy';
+  let copyTimer;
+  let copyPending = false;
+  function renderCopyButton() { copyBibtex.textContent = t('footer.' + copyState); }
+  copyBibtex.addEventListener('click', async () => {
+    if (copyPending) return;
+    copyPending = true;
+    clearTimeout(copyTimer);
+    try {
+      await navigator.clipboard.writeText(document.getElementById('survey-bibtex').textContent);
+      copyState = 'copied';
+    } catch (e) {
+      copyState = 'copy_failed';
+    } finally {
+      copyPending = false;
+    }
+    renderCopyButton();
+    copyTimer = setTimeout(() => { copyState = 'copy'; renderCopyButton(); }, 2000);
+  });
+
   function applyLang() {
     // Static text via data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -973,6 +1029,10 @@ SCRIPT = r"""
     document.getElementById('lang-label').textContent = t('lang.switch_to');
     document.getElementById('lang-toggle').title = t('lang.title');
     document.getElementById('lang-toggle').setAttribute('aria-label', t('lang.title'));
+    const buildDate = document.getElementById('build-date');
+    buildDate.textContent = buildDate.dataset[lang];
+    document.getElementById('footer-paper-count').textContent = t('footer.paper_count', { n: papers.length });
+    renderCopyButton();
     // Section descriptions (with placeholders)
     const descEl = document.getElementById('papers-section-desc');
     if (descEl) {
